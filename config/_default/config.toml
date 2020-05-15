@@ -1,0 +1,9 @@
+baseURL = ""
+languageCode = "en-us"
+title = "Jacks Portolio"
+
+
+[params]
+type = "website"
+image = "#"
+footertext = "© Pardus Eidolon | Jack O'Brien"

@@ -1,0 +1,20 @@
+{{ define "main" }}
+{{ partial "sidebar.html" . }}
+
+<!-- Main page content -->
+<div id="main">
+    <!-- nav menu buttons -->
+    <div class="flex justify-between items-center">
+        <a href='{{ absURL ""}}'><i class="ma4 black-70 dim f2 fas fa-arrow-left"></i></a>
+        <button class="ma4 grow dim openbtn" onclick="openNav()"><i class="black-70 f2 fas fa-info-circle"></i></button>
+    </div>
+    <!-- main content header -->
+    <div class="flex mt5 flex-column justify-center">
+        <h1 class="tc ma0 pa0 fw6 f-subheadline ttu">Video work</h1>
+        <div class=" mv4 center w-20 bw1 ba"></div>
+        <h2 class="tc ma0 fw2">A showcase of my films I have made over the years</h2>
+    </div>
+</div>
+
+{{ partial "sidebar_javascript.html" . }}
+{{ end }}
