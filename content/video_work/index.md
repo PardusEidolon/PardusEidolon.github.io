@@ -34,7 +34,7 @@ Lucas ipsum dolor sit amet solo darth r2-d2 owen qui-gonn solo moff naboo yoda s
 Lucas ipsum dolor sit amet solo darth r2-d2 owen qui-gonn solo moff naboo yoda skywalker. C-3po dagobah wedge alderaan jinn ben vader darth. Jinn endor chewbacca wookiee mace calamari darth endor. C-3po cade endor.
 {{< /vimeo >}}
 
-{{< vimeo "261938370" "Artist Profile: Sara Brodie" >}}
+{{< vimeo "261938370" "Sara Brodie" >}}
 Lucas ipsum dolor sit amet solo darth r2-d2 owen qui-gonn solo moff naboo yoda skywalker. C-3po dagobah wedge alderaan jinn ben vader darth. Jinn endor chewbacca wookiee mace calamari darth endor. C-3po cade endor.
 {{< /vimeo >}}
 
