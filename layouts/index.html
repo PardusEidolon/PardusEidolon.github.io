@@ -1,23 +1,25 @@
 {{ define "main" }}
+{{ $sections := split .Content "+++" }}
 <!-- landing page -->
 <section class="video w-100 vh-100 flex justify-center items-center" style="z-index: 0;">
     <!-- Content page wrap -->
     <div class="absolute" style="z-index: 1;">
         <!-- Header text -->
         <div class="mv4">
-            <h1 class="f-subheadline tc fw2 mb0 white">Jack O'Brien</h1>
+            <h1 class="f-subheadline tc fw2 mb0 white">{{.Title}}</h1>
             <hr class="mv4">
-            <p class="white tc measure-wide fw2">Hanc ego cum a philosophis compluribus permulta dicantur, cur nec me
-                tamen laudandis maioribus </p>
+            <p class="white tc f2 ttc measure-wide fw2">{{ .Summary }}</p>
         </div>
         <!-- Page Link Buttons -->
         <div class="tc mt5">
             <a href="video_work"
-                class="f3 mr5 ttu no-underline white dim inline-flex items-center ph4 pv3 ba fw4 border-box">Video</a>
+                class="f3 ttu no-underline white dim inline-flex items-center ph4 pv3 ba fw4 border-box">Video</a>
             <a href="#"
+                class="f3 mh5 ttu no-underline white dim inline-flex items-center ph4 pv3 ba fw4 border-box">Blog</a>
+            <a href="music"
                 class="f3 ttu no-underline white dim inline-flex items-center ph4 pv3 ba fw4 border-box">Music</a>
         </div>
-        
+
         <!-- About section button -->
         <div class="tc mt6">
             <a class="dim link white-90 f1" href="#section2">
@@ -35,46 +37,21 @@
 <!-- About Page -->
 <section>
     <!-- Page Wrap -->
-    <div id="section2" class="vh-100 dt w-100 tc cover" style="background:url('{{"img/slide/camera2.jpg" | absURL}}') no-repeat center;">
-        <div class="w-100 absolute" style="top: 57.2em; left: 0; height: 100vh; background-color: black; opacity: 50%; z-index: 2;"></div>
+    <div id="section2" class="vh-100 dt w-100 tc cover"
+        style="background:url('{{"img/slide/camera2.jpg" | absURL}}') no-repeat center;">
+        <div class="w-100 absolute"
+            style="top: 57.2em; left: 0; height: 100vh; background-color: black; opacity: 50%; z-index: 2;"></div>
         <!-- Page Content -->
         <div class="mt6 absolute" style="z-index: 3;">
             <h1 class="f1 white fw4 ttu">About Me</h1>
             <hr class="w-40">
-            <h2 class="i f4 mv3 white fw2">“Sunt autem quidam e nostris, qui ratione voluptatem accusantium doloremque.”</h2>
-            
+            <h2 class="i f4 mv3 white fw2">“We tell ourselves stories in order to live."</h2>
+
             <!-- Paragraphs -->
-            <div class="w-50 mt4 center white">
-                <p class="tl">Si sine causa, nollem me ab eo ortum, tam egregios viros censes aut in animis nostris
-                    inesse notionem, ut
-                    aliquid ex eo ortum, tam egregios viros censes tantas res gessisse sine causa? quae fuerit causa,
-                    mox
-                    videro; interea hoc tenebo, si mihi probabis ea, quae.
-                    In oculis quidem se oratio, tua praesertim, qui dolorem ipsum, quia voluptas in bonis sit id, de
-                    homine
-                    sensibus reliqui nihil ut labore et dolore suo sanciret militaris imperii </p>
-
-                <p class="tl">disciplinam exercitumque in bonis sit aut fugiat aliquid, praeter voluptatem et ultimum
-                    bonorum, quod
-                    maxime consuevit.Quae fuerit causa, mox videro; interea hoc tenebo, si ob aliquam quaerat voluptatem
-                    ipsam voluptatem,
-                    quia voluptas sit, a sapiente delectus, ut ratione intellegi posse et inter argumentum
-                    conclusionemque
-                    rationis et aperta iudicari etenim quoniam detractis de commodis suis cogitarent? at id omnia
-                    referri
-                    oporteat.</p>
-
-                <p class="tl">disciplinam exercitumque in bonis sit aut fugiat aliquid, praeter voluptatem et ultimum
-                    bonorum, quod
-                    maxime consuevit.Quae fuerit causa, mox videro; interea hoc tenebo, si ob aliquam quaerat voluptatem
-                    ipsam voluptatem,
-                    quia voluptas sit, a sapiente delectus, ut ratione intellegi posse et inter argumentum
-                    conclusionemque
-                    rationis et aperta iudicari etenim quoniam detractis de commodis suis cogitarent? at id omnia
-                    referri
-                    oporteat.</p>
+            <div class="w-50 mt4 center tl white">
+                {{ index $sections 0 | safeHTML }}
             </div>
-            
+
             <!-- Social Channels -->
             {{ partial "social_icons.html" . }}
         </div>
