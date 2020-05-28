@@ -1,0 +1,28 @@
+{{ define "main" }}
+<article>
+    <div class="absolute">
+        <a href='{{ absURL "/blog"}}'><i class="ma4 black-70 dim f2 fas fa-arrow-left"></i></a>
+    </div>
+    <div class="vh-50 w-100 tc bg-dark-gray cover"
+        style="background:url({{ index .Params "featured_image" }}) no-repeat center;">
+        <div class="flex justify-center items-center">
+            <div class="white mv6 bg-black br2 ph4">
+                <h1 class="f1 fw6 ttu tracked mb2">{{.Title}}</h1>
+                <h3 class="f6 fw4">{{ .Date.Format "Mon, Jan 2, 2006" }}</h3>
+            </div>
+        </div>
+    </div>
+    <!-- Single page body template -->
+    {{ $sections := split .Content "+++" }}
+    <div class="f5 lh-copy ph7 pv4">
+        {{ index $sections 0 | safeHTML }}
+        <div class="images">
+            {{ index $sections 1 | safeHTML }}
+        </div>
+        {{ index $sections 2 | safeHTML }}
+    </div>
+
+    {{ partial "footer.html" . }}
+
+</article>
+{{ end }}

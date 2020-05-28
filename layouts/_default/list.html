@@ -1,0 +1,44 @@
+{{ define "main" }}
+
+<!-- main block for list tmeplate starts here -->
+<!-- ========================================================== -->
+<div class="flex justify-between items-center">
+    <a href='{{ absURL "/"}}'><i class="ma4 black-70 dim f2 fas fa-arrow-left"></i></a>
+</div>
+<div class="flex justify-center">
+    <div class="tc mv4 w-70-m dn db-ns ">
+        <h1 class="tc ma0 pa0 fw6 f-subheadline ttu">{{ .Title }}</h1>
+        <div class=" mv4 center w-50 bw1 ba"></div>
+        <h2 class="tc ma0 fw2">{{ .Summary }}</h2>
+        <h3 class="f3-ns f4 grey lh-copy fw4" style="color: grey;">{{.Content}}</h3>
+    </div>
+</div>
+
+{{ range .Pages.ByDate }}
+<div class="flex justify-center items-center mv4">
+    <div class="list_img w-10">
+        <a href="{{.Permalink}}" class="dim">{{if isset .Params "featured_image" }}
+            <img src="{{ index .Params "featured_image" }}"></a>
+        {{end}}
+    </div>
+    <div class="ml4">
+        <h1 class="fw6 ttc f4">{{ .Title }}</a></h1>
+        <p class="black-70 measure-wide">{{ .Summary }}</p>
+        <time class="black-70">{{ .Date.Format "Mon, Jan 2, 2006" }}</time>
+    </div>
+</div>
+{{end}}
+
+<div class="fixed w-100" style="left: 0; bottom: 0;">
+    <div class="tc f3 mv4">
+        <a class="black-70 dim" href="https://www.instagram.com/jack.obrien.does.things/"><i class="grow fab fa-instagram"></i></a>
+        <a class="black-70 dim mh4" href="https://vimeo.com/parduseidolon"><i class="grow fab fa-vimeo-v"></i></a>
+        <a class="black-70 dim" href="https://twitter.com/1cooljack"><i class="grow fab fa-twitter"></i></a>
+    </div>
+    <footer class="mv4 tc flex flex-column">
+        <small class="ttc fw2 black-80">{{ $.Site.Params.footertext }}</small>
+        <small class="ttc fw2 black-80 mv2">{{ $.Site.Params.footertext2 }}</small>
+    </footer>
+</div>
+
+{{ end }}

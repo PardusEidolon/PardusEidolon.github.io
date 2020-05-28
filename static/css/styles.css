@@ -6,6 +6,7 @@ body {
 
 * {
     scroll-behavior: smooth;
+    
 }
 
 .sidebar {
@@ -27,4 +28,17 @@ body {
     cursor: pointer;
     color: black;
     border: none;
+  }
+
+  .images img{
+    width: 30%;
+    margin: 2em 2em 2em 0 ;
+  }
+
+  .list_img{
+    width: 15%;
+  }
+
+  .vimeo iframe{
+    width: 30%;
   }
