@@ -2,8 +2,14 @@
 
 <!-- main block for list tmeplate starts here -->
 <!-- ========================================================== -->
-<div class="flex justify-between items-center">
-    <a href='{{ absURL "/"}}'><i class="ma4 black-70 dim f2 fas fa-arrow-left"></i></a>
+<div class="flex items-center">
+    <div class="fixed">
+        <a class="ma4" href='{{ absURL "/"}}'><i class="black-70 dim f2 fas fa-arrow-left"></i></a>
+    </div>
+        <div class="flex justify-center items-center center">
+            <a class="mh3 mv4 link grow dim  black f3 fw7 ttu" href="/blog">Video</a>
+            <a class="mh3 link grow dim black f3 fw7 ttu" href="/music">Music</a>
+        </div>
 </div>
 <div class="flex justify-center">
     <div class="tc mv4 w-70-m dn db-ns ">
@@ -16,7 +22,7 @@
 
 {{ range .Pages.ByDate }}
 <div class="flex justify-center items-center mv4">
-    <div class="list_img w-10">
+    <div class="list_img">
         <a href="{{.Permalink}}" class="dim">{{if isset .Params "featured_image" }}
             <img src="{{ index .Params "featured_image" }}"></a>
         {{end}}

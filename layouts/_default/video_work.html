@@ -6,8 +6,13 @@
 <div id="main">
     <!-- nav menu buttons -->
     <div class="flex justify-between items-center">
-        <a href='{{ absURL "/"}}'><i class="ma4 black-70 dim f2 fas fa-arrow-left"></i></a>
-        <button class="ma4 grow dim openbtn" onclick="openNav()"><i class="black-70 f2 fas fa-info-circle"></i></button>
+        <a href='{{ absURL "/"}}'><i class="ma4 black-70 grow dim f2 fas fa-arrow-left"></i></a>
+        <!-- Page Links -->
+        <div>
+            <a class="link grow dim  black f3 fw7 ttu mr4" href="/blog">Blog</a>
+            <a class="link grow dim black f3 fw7 ttu" href="/music">Music</a>
+        </div>
+        <button class="ma4 grow dim bn bg-white" onclick="openNav()"><i class="black-70 f2 fas fa-info-circle"></i></button>
     </div>
     <!-- main content header -->
     <div class="flex mt5 flex-column justify-center">
