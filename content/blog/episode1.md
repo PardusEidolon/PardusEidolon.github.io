@@ -1,16 +1,21 @@
 ---
 title: "The Dawn of a New Blog"
 date: 2020-05-28T13:03:07+12:00
-featured_image: "https://wallpaperaccess.com/full/1901973.jpg"
+featured_image: "https://images.unsplash.com/photo-1555347873-e5410faa3d10?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+thumbnail: "/thumbnail/Blog_1/slice1.jpg"
 draft: false
 ---
 
-Hey...hey, open the pressure maintenance hatch on unit number... where are we? Three-two-six-eight-two-seven. If we can just avoid any more female advice, we ought to be able to get out of here. Well, let's get moving! Where are you going? No, wait. They'll hear! Come here, you big coward! Chewie! Come here! Listen. I don't know who you are, or where you came from, but from now on, you do as I tell you. Okay? Look, Your Worshipfulness, let's get one thing straight! I take orders from one person! Me! It's a wonder you're still alive. Will somebody get this big walking carpet out of my way? No reward is worth this.
+Well It's about time that this got done. Im typing this from a typewriter, no not a real typewriter that would be silly, but rather on an over the top typing simulator. I’m not really good at this and if it were me in the second world war filing papers and writing letters, I don't think  I would make a very good computer.
 
-Where could they be? Close the blast doors! Open the blast doors! Open the blast doors! I've been waiting for you, Obi-Wan. We meet again, at last. The circle is now complete. When I left you, I was but the learner, now I am the master. Only a master of evil, Darth. Your powers are weak, old man. You can't win, Darth. If you strike me down, I shall become more powerful than you can possibly imagine.
+But alas modern day computing and software advancements beyond the comprehension of the everyday man I' m also wanting to announce the first blog post on my brand new site. I'm still a little new to this game, but the time it takes to get from where I was to where I am now.
 
-Let him go! Stay on the leader! Hurry, Luke, they're coming in much faster this time. I can't hold them! Artoo, try and increase the power! Hurry up, Luke! Wait! I'm on the leader. Hang on, Artoo! Use the Force, Luke. Let go, Luke. The Force is strong with this one! Luke, trust me. His computer's off. Luke, you switched off your targeting computer. What's wrong? Nothing. I'm all right. I've lost Artoo! You may fire when ready. I have you now.
+ Where were we right? Yes “the blog" it's taken me at least 3-4 months to get this far. I think with the knowledge  coming and the resources coming slowly together in my mind is a big step forward from where I was in the past before all this happened.
 
-Are they away? They have just made the jump into hyperspace. You're sure the homing beacon is secure aboard their ship? I'm taking an awful risk, Vader. This had better work.
+We still have a long road to go before this site is spick and span. A mobile deployment still has to created so it doesn't come out stupid on the everyyday smart phpne browser. (or maybe I should just make a portfolio app. Also current review of typewriters so far is it makes me glad I wasn't born under a rock) Performance updates and optimizations still need to be implemented Feel to look at the original pdf of this document to reveal just how bad I would do if a 50's newspaper company decided to hire me to write about opinion pieces.
 
-Secure this area until the alert is canceled. Give me regular reports. Do you know what's going on? Maybe it's another drill. What was that? Oh, it's nothing. Don't worry about it.
+### Reference:
+
+- [OverType](https://uniqcode.com/typewriter/) - The Over-The-Top Typewriter Simulator
+
+{{< box-preview id="zewtb9isxdwdcfvldsy7vtz0rubfkgwu" height="400" >}}
