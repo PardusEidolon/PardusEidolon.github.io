@@ -4,33 +4,34 @@
 <!-- ========================================================== -->
 <div class="flex items-center">
     <div class="fixed">
-        <a class="ma4" href='{{ absURL "/"}}'><i class="black dim f2 fas fa-arrow-left"></i></a>
+        <a class="ma4" href='{{ absURL "/"}}'><i class="black dim f2-ns f4 fas fa-arrow-left"></i></a>
     </div>
+    <!-- Nav_Bar -->
         <div class="flex justify-center items-center center">
-            <a class="mh3 mv4 link grow dim  black f3 fw7 ttu" href="/video_work">Video</a>
-            <a class="mh3 link grow dim black f3 fw7 ttu" href="/music">Music</a>
+            <a class="mh3 mv4 link grow dim  black f3-ns f6 fw7 ttu" href="/video_work">Video</a>
+            <a class="mh3 link grow dim black f3-ns f6 fw7 ttu" href="/music">Music</a>
         </div>
 </div>
 <div class="flex justify-center">
-    <div class="tc mv4 w-70-m dn db-ns ">
-        <h1 class="tc ma0 pa0 fw6 f-subheadline ttu">{{ .Title }}</h1>
-        <div class=" mv4 center w-50 bw1 ba"></div>
-        <h2 class="tc ma0 fw2">{{ .Summary }}</h2>
+    <div class="tc mv4 w-70-m ">
+        <h1 class="tc ma0 pa0 fw6 f-subheadline-ns ttu">{{ .Title }}</h1>
+        <div class=" mv4 center w-50 bw1 dn db-ns ba"></div>
+        <h2 class="tc ma0 f2-ns f5 mt3 mt0-ns fw2">{{ .Summary }}</h2>
     </div>
 </div>
 
 {{ range .Pages.ByDate }}
 
-<div class="flex justify-center items-center mv4">
-    <div class="list_img">
+<div class="flex justify-center items-center mv4-ns">
+    <div class="w4 w-10-l w-30-m ma3 ma4-m ma0-l h4-l">
         <a href="{{.Permalink}}" class="dim">{{if isset .Params "featured_image" }}
             <img src="{{ index .Params "thumbnail" }}"></a>
         {{end}}
     </div>
-    <div class="ml4">
-        <h1 class="fw6 ttc f4">{{ .Title }}</h1>
-        <p class="black-70 measure-wide">{{ .Summary }}...<a class="link underline-hover black-70" href="{{.Permalink}}">Read More</a></p>
-        <time class="black-70">{{ .Date.Format "Mon, Jan 2, 2006" }}</time>
+    <div class="ml4-l mh2">
+        <h1 class="fw6 ttc f4-m f3-l f7">{{ .Title }}</h1>
+        <p class="black-70 f4-m f5-l f7 mr5-m mr0-l mr3 measure-wide-ns measure-narrow">{{ .Summary }}...<a class="link underline-hover black-70" href="{{.Permalink}}">Read More</a></p>
+        <time class="black-70 f5-ns f7">{{ .Date.Format "Mon, Jan 2, 2006" }}</time>
     </div>
 </div>
 {{end}}

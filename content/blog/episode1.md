@@ -3,6 +3,7 @@ title: "The Dawn of a New Blog"
 date: 2020-05-28T13:03:07+12:00
 featured_image: "https://images.unsplash.com/photo-1555347873-e5410faa3d10?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
 thumbnail: "/thumbnail/Blog_1/slice1.jpg"
+summary: Well It's about time that this got done. Im typing this from a typewriter, no not a real typewriter that would be silly, but rather on an over the top typing simulator.
 draft: false
 ---
 
