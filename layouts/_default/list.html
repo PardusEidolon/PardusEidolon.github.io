@@ -22,8 +22,8 @@
 
 {{ range .Pages.ByDate }}
 
-<div class="flex justify-center items-center mv4-ns">
-    <div class="w4 w-10-l w-30-m ma3 ma4-m ma0-l h4-l">
+<div class="flex justify-center items-center mt5">
+    <div class="w4 mw4-l w-10-l w-30-m ma3 ma4-m ma0-l">
         <a href="{{.Permalink}}" class="dim">{{if isset .Params "featured_image" }}
             <img src="{{ index .Params "thumbnail" }}"></a>
         {{end}}
@@ -36,7 +36,7 @@
 </div>
 {{end}}
 
-<div class="fixed w-100" style="left: 0; bottom: 0;">
+<div class="mt6">
     <div class="tc f3 mv4">
         <a class="black-70 dim" href="https://www.instagram.com/jack.obrien.does.things/"><i class="grow fab fa-instagram"></i></a>
         <a class="black-70 dim mh4" href="https://vimeo.com/parduseidolon"><i class="grow fab fa-vimeo-v"></i></a>
