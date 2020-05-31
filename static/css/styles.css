@@ -29,9 +29,9 @@ body {
     border: none;
   }
 
-  .images img{
+  .blog_img img{
     width: 30%;
-    margin: 2em 2em 2em 0 ;
+    margin: 1em;
   }
 
   .list_img{

@@ -16,7 +16,7 @@
     <div class="f5-ns f6 lh-copy ph7-l pv4-ns pa4">
         <h3 class="dn-l db f6 black-70 fw4">{{ .Date.Format "Mon, Jan 2, 2006" }}</h3>
         {{ index $sections 0 | safeHTML }}
-        <div class="images">
+        <div class="blog_img flex flex-wrap">
             {{ index $sections 1 | safeHTML }}
         </div>
         {{ index $sections 2 | safeHTML }}
