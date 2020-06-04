@@ -4,7 +4,25 @@ title = "Jacks Portolio"
 
 
 [params]
+dateFormat = "Jan 2, 2006"
 type = "website"
 image = "#"
 footertext = "© Pardus Eidolon | Jack O'Brien"
 footertext2 = "powered by Hugo & Tachyons 4.12.0 "
+
+[menu]
+  [[menu.main]]
+    name = "video"
+    url = "/video_work"
+    weight = 1
+  [[menu.main]]
+    name = "Blog"
+    url = "/blog"
+    weight = 2
+  [[menu.main]]
+    name = "Music"
+    url = "/music"
+    weight = 3
+
+[taxonomies]
+  tag = "tags"

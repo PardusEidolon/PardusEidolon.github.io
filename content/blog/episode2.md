@@ -4,6 +4,7 @@ date: 2020-05-31T15:52:26+12:00
 featured_image: "/img/dune.png"
 thumbnail: "/thumbnail/Blog_2/thumbnail_ue4.jpg"
 summary: Over the past couple weeks I have been dipping my fingers into the unreal engine documentation and community materials associated with it.
+tags: ["Unreal Engine", "Enviroment Design"]
 draft: false
 ---
 
@@ -21,5 +22,4 @@ Be sure to check out Quixel and their scans to see the uncompromising level of d
 +++ 
 ![Megascans thumbnail](https://cdn.quixel.com/quixel/thumbs/page-thumb-megascans.jpg)
 ![Megascans Temple](https://blog.megascans.se/wp-content/uploads/2018/12/rodolfo-galvez-render-uncharted-dog-4.jpg)
-![Megascans Menu](https://i1.wp.com/cgrecord.org/wp-content/uploads/2019/12/Quixel-Bridge-2019.5.jpg?fit=1600%2C854&ssl=1)
 ![Megascans Menu](https://i1.wp.com/cgrecord.org/wp-content/uploads/2019/12/Quixel-Bridge-2019.5.jpg?fit=1600%2C854&ssl=1)

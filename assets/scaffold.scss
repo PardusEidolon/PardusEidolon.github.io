@@ -1,0 +1,96 @@
+// variables based on tachyons classes
+// set font family options from config with defaults
+$textFontFamily: {{ .Site.Params.textFontFamily | default "sans-serif" }};
+$headingFontFamily: {{ .Site.Params.headingFontFamily | default "sans-serif" }};
+// set color options from config with defaults
+$siteBgColor: {{ .Site.Params.siteBgColor | default "near-white" }};
+$sidebarBgColor: {{ .Site.Params.sidebarBgColor | default "light-gray" }};
+$textColor: {{ .Site.Params.textColor | default "near-black" }};
+$sidebarTextColor: {{ .Site.Params.sidebarTextColor | default "dark-gray" }};
+$headlineColor: {{ .Site.Params.headlineColor | default "black" }};
+$headingColor: {{ .Site.Params.headingColor | default "near-black" }};
+$bodyLinkColor: {{ .Site.Params.bodyLinkColor | default "blue" }};
+$navLinkColor: {{ .Site.Params.navLinkColor | default "near-black" }};
+$sidebarLinkColor: {{ .Site.Params.sidebarLinkColor | default "near-black" }};
+$footerTextColor: {{ .Site.Params.footerTextColor | default "silver" }};
+$buttonTextColor: {{ .Site.Params.buttonTextColor | default "near-white" }};
+$buttonBgColor: {{ .Site.Params.buttonBgColor | default "black" }};
+$buttonHoverTextColor: {{ .Site.Params.buttonHoverTextColor | default "white" }};
+$buttonHoverBgColor: {{ .Site.Params.buttonHoverBgColor | default "blue" }};
+$borderColor: {{ .Site.Params.borderColor | default "moon-gray" }};
+
+// learn about Tachyons http://tachyons.io
+@import 'tachyons';
+// uncomment the import below to activate custom-colors
+// add your own colors at the top of the imported file
+// @import 'custom-colors';
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+* {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  padding: 0%;
+  margin: 0%;
+  
+}
+
+.sidebar {
+  max-height: 150%;
+  height: 100vh;
+  width: 0%; /* 0 width - change this with JavaScript */
+  position: fixed;/* Stay in place */
+  z-index: 1; /* Stay on top */
+  bottom: 0;
+  right: 0;
+  background-color: white;
+  opacity: 0%;
+  transition: 0.3s; /* 0.5 second transition effect to slide in the sidebar */
+  overflow-y: auto;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+}
+
+.blog_img img{
+  width: 30%;
+  margin: 1em;
+}
+
+.list_img{
+  width: 15%;
+}
+
+.vimeo iframe{
+  width: 30%;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: 70% 30%;
+}
+
+.grid > div{
+  padding: 2em;
+}
+
+@media only screen and (max-width: 670px) {
+  .blog_img img{
+    max-width: 100%;
+    margin: 1em;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+.blog_img img{
+  width: 100%;
+  margin: 1em;
+}
+}

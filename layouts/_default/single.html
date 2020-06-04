@@ -1,12 +1,10 @@
 {{ define "main" }}
+<!-- Nav_Bar -->
 <article>
-    <div class="absolute">
-        <a class="" href='{{ absURL "/blog"}}'><i class="br-pill bg-white pa3 ma4 black dim f2-l f3-m f5 fas fa-arrow-left"></i></a>
-    </div>
-    <div class="vh-50-l vh-30-m w-100 tc bg-dark-gray cover" style="background:url({{ index .Params "featured_image" }}) no-repeat center;">
+    <div class="vh-50-l vh-30-m tc bg-dark-gray cover" style="background:url({{ index .Params "featured_image" }}) no-repeat center;">
         <div class="flex justify-center items-center">
-            <div class="white mv6 bg-black br2 ph4">
-                <h1 class="f1-l f2-m f5 fw6 ttu pa3-l pv0-l pv3 pv4-m tracked mb2">{{.Title}}</h1>
+            <div class="white w-80 mv6 bg-black br2 ph4">
+                <h1 class="f1-l f2-m f4 fw6 ttu pa3-l pv0-l pv3 pv4-m tracked mb2">{{.Title}}</h1>
                 <h3 class="f6-ns db-l dn fw4">{{ .Date.Format "Mon, Jan 2, 2006" }}</h3>
             </div>
         </div>
@@ -16,13 +14,14 @@
     <div class="f5-ns f6 lh-copy ph7-l pv4-ns pa4">
         <h3 class="dn-l db f6 black-70 fw4">{{ .Date.Format "Mon, Jan 2, 2006" }}</h3>
         {{ index $sections 0 | safeHTML }}
-        <div class="blog_img flex flex-wrap">
-            {{ index $sections 1 | safeHTML }}
+        <div class="blog_img">
+            <div class="flex flex-wrap-ns flex-row-ns flex-column mw-100-ns">
+                {{ index $sections 1 | safeHTML }}
+            </div>
         </div>
         {{ index $sections 2 | safeHTML }}
     </div>
 
-    {{ partial "footer.html" . }}
-
+{{ partial "footer.html" . }}
 </article>
 {{ end }}
