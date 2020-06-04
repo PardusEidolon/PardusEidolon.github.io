@@ -1,44 +1,55 @@
 {{ define "main" }}
-
-<!-- main block for list tmeplate starts here -->
-<!-- ========================================================== -->
-<section>
-    <!-- Header -->
-    <div class="tc">
-        <h1 class="tc ma0 pa0 fw6 f-subheadline-ns ttu">{{ .Title }}</h1>
-        <div class=" mv4 center w-20 bw1 dn db-ns ba"></div>
-        <h2 class="tc ma0 f2-ns f5 mt3 mt0-ns fw2">{{ .Summary }}</h2>
+<div class="grid-container">
+    <div class="navbar ">
+        <div class="home"><a href='{{ absURL "/"}}'><i class="black grow dim f3 fas fa-arrow-left"></i></a></div>
+        <nav class="navlinks">
+            {{ range .Site.Menus.main }}
+            <a class="link black f3 pa4 fw6 dim" href="{{ .URL }}">{{ .Name }}</a>
+            {{ end }}
+        </nav>
     </div>
-
-    {{ range .Pages.ByPublishDate.Reverse }}
-    <!-- Pages -->
-    <div class="flex justify-center items-center mt5-ns">
-        <div class="w4 mw4-l w-10-l w-30-m ma3 ma4-m ma0-l">
-            <a href="{{.Permalink}}" class="dim">{{if isset .Params "featured_image" }}
-                <img src="{{ index .Params "thumbnail" }}"></a>
-            {{end}}
-        </div>
-        <div class="ml4-l mh2">
-            <h1 class="fw6 ttc f4-m f3-l f7">{{ .Title }}</h1>
-            <p class="black-70 f4-m f5-l f7 mr5-m mr0-l mr3 measure-wide-ns measure-narrow">{{ .Summary }}...<a
-                    class="link underline-hover black-70" href="{{.Permalink}}">Read More</a></p>
-            {{ partial "date-and-tags.html" . }}
+    <div class="header">
+        <div class="headline tc">
+            <h1 class="f-subheadline fw6 ma0 ttu mt3">{{.Title}}</h1>
+            <div class="mv4 center ma0 w-20 bw1 ba"></div>
+            <h1 class="f4 fw4">{{.Summary}}</h1>
         </div>
     </div>
-    {{end}}
-
-    <!-- Footer -->
-    <div class="mt6-ns mt4">
-        <div class="tc f3 mv4">
-            <a class="black-70 dim" href="https://www.instagram.com/jack.obrien.does.things/"><i
-                    class="grow fab fa-instagram"></i></a>
-            <a class="black-70 dim mh4" href="https://vimeo.com/parduseidolon"><i class="grow fab fa-vimeo-v"></i></a>
-            <a class="black-70 dim" href="https://twitter.com/1cooljack"><i class="grow fab fa-twitter"></i></a>
+    <div class="content">
+        <div class="blog flex flex-column">
+            {{ range .Pages.ByPublishDate.Reverse }}
+            <div class="flex justify-center items-center mv4">
+                <div class="mh3 thumbnail">
+                    <a href="{{.Permalink}}" class="dim">{{if isset .Params "featured_image" }}
+                        <img src="{{ index .Params "thumbnail" }}"></a>
+                    {{end}}
+                </div>
+                <div class="blog_content">
+                    <h1 class="ma0 mb3 f3 ttc">{{ .Title }}</h1>
+                    <p class="black-80 measure lh-copy">{{ .Summary }}..<a class="link underline-hover black-70"
+                            href="{{.Permalink}}">Read
+                            More</a></p>
+                    {{ partial "date-and-tags.html" . }}
+                </div>
+            </div>
+            {{ end }}
         </div>
-        <footer class="mv4 tc flex flex-column">
-            <small class="ttc fw2 black-80">{{ $.Site.Params.footertext }}</small>
-            <small class="ttc fw2 black-80 mv2">{{ $.Site.Params.footertext2 }}</small>
-        </footer>
     </div>
-</section>
+    <div class="footer">
+        <div class="Footer_wrap">
+            <div class="tc f3 mv4">
+                <a class="black-70 dim" href="https://www.instagram.com/jack.obrien.does.things/"><i
+                        class="grow fab fa-instagram"></i></a>
+                <a class="black-70 dim mh4" href="https://vimeo.com/parduseidolon"><i
+                        class="grow fab fa-vimeo-v"></i></a>
+                <a class="black-70 dim" href="https://twitter.com/1cooljack"><i class="grow fab fa-twitter"></i></a>
+            </div>
+            <footer class="mv4 tc flex flex-column">
+                <small class="ttc fw2 black-80">{{ $.Site.Params.footertext }}</small>
+                <small class="ttc fw2 black-80 mv2">{{ $.Site.Params.footertext2 }}</small>
+            </footer>
+        </div>
+    </div>
+</div>
+
 {{ end }}
