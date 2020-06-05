@@ -1,29 +1,7 @@
-// variables based on tachyons classes
-// set font family options from config with defaults
-$textFontFamily: {{ .Site.Params.textFontFamily | default "sans-serif" }};
-$headingFontFamily: {{ .Site.Params.headingFontFamily | default "sans-serif" }};
-// set color options from config with defaults
-$siteBgColor: {{ .Site.Params.siteBgColor | default "near-white" }};
-$sidebarBgColor: {{ .Site.Params.sidebarBgColor | default "light-gray" }};
-$textColor: {{ .Site.Params.textColor | default "near-black" }};
-$sidebarTextColor: {{ .Site.Params.sidebarTextColor | default "dark-gray" }};
-$headlineColor: {{ .Site.Params.headlineColor | default "black" }};
-$headingColor: {{ .Site.Params.headingColor | default "near-black" }};
-$bodyLinkColor: {{ .Site.Params.bodyLinkColor | default "blue" }};
-$navLinkColor: {{ .Site.Params.navLinkColor | default "near-black" }};
-$sidebarLinkColor: {{ .Site.Params.sidebarLinkColor | default "near-black" }};
-$footerTextColor: {{ .Site.Params.footerTextColor | default "silver" }};
-$buttonTextColor: {{ .Site.Params.buttonTextColor | default "near-white" }};
-$buttonBgColor: {{ .Site.Params.buttonBgColor | default "black" }};
-$buttonHoverTextColor: {{ .Site.Params.buttonHoverTextColor | default "white" }};
-$buttonHoverBgColor: {{ .Site.Params.buttonHoverBgColor | default "blue" }};
-$borderColor: {{ .Site.Params.borderColor | default "moon-gray" }};
-
 // learn about Tachyons http://tachyons.io
 @import 'tachyons';
-// uncomment the import below to activate custom-colors
-// add your own colors at the top of the imported file
-// @import 'custom-colors';
+@import 'list_page';
+@import 'single_page';
 
 body {
   padding: 0;
@@ -58,116 +36,12 @@ body {
   overflow-y: auto;
 }
 
-.openbtn {
-  font-size: 20px;
-  cursor: pointer;
-  border: none;
-}
-
-.blog_img img{
-  max-width: 30%;
-  margin: 1em;
-}
-
-.list_img{
-  width: 15%;
-}
 
 .vimeo iframe{
   width: 30%;
 }
 
-// --------------------
-// LIST PAGE GRIDS
 
-.grid-list{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 100px 250px 1fr 150px;
-  grid-template-areas:
-  "navbar navbar navbar navbar" 
-  "header header header header" 
-  "content content content content" 
-  "footer footer footer footer";
-  grid-gap: 10px;
-}
-
-.navbar{
-  grid-area: navbar;
-  display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
-  justify-items: center;
-  align-items: center;
-}
-.header{
-  grid-area: header;
-  display: grid;
-}
-.content{
-  grid-area: content;
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-areas: ". blog .";
-  grid-gap: 1em;
-}
-
-.blog{
-  grid-area: blog;
-}
-
-.thumbnail{
-  width: 20%; 
-}
-
-.footer{
-  grid-area: footer;
-  display: grid;
-  grid-template-areas: ". Footer_wrap Footer_wrap ."
-}
-
-.Footer_wrap{
-  grid-area: Footer_wrap;
-}
-// ---------------------
-// SINGLE-PAGE GRIDS
-
-.grid-single-nav{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 100px;
-  grid-template-areas:
-  "navbar navbar navbar navbar";
-  grid-gap: 10px;
-}
-
-.single-header{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  align-items: center;
-  justify-self: center;
-  grid-template-areas: " .single-header-content single-header-content .";
-}
-
-.single-header-content{
-  grid-area: single-header-content;
-}
-
-.single-content{
-  display: grid;
-  grid-template-columns: 100px 2fr 100px;
-  grid-template-rows: 1fr;
-  grid-template-areas: ". single-text ." ". blog_img .";
-  grid-gap: 10px;
-  align-items: center;
-  justify-self: center;
-}
-.single-text{
-  grid-area: single-text;
-}
-
-.blog_img{
-  grid-area: blog_img;
-}
 
 //----------------------
 

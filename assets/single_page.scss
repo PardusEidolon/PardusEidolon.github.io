@@ -1,0 +1,32 @@
+// SINGLE-PAGE GRIDS
+
+  .single-header{
+    @include grid_list(1fr 2fr 1fr);
+    display: grid;
+    align-items: center;
+    justify-self: center;
+    grid-template-areas: " .single-header-content .";
+  }
+  
+  .single-header-content{
+    grid-area: single-header-content;
+  }
+  .single-content {
+    @include grid_list(100px 2fr 100px);
+    @include items_center();
+    display: grid;
+    grid-template-areas: ". single-text ."". blog_img .";
+    grid-gap: 10px;
+
+    .blog_img{
+        grid-area: blog_img;
+        
+        img {
+            width: 30%;
+
+          }
+    }
+    .single-text{
+        grid-area: single-text;
+      }
+  }

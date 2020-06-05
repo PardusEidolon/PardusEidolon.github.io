@@ -1,0 +1,55 @@
+// LIST PAGE GRIDS
+@mixin grid_list ($tmp_column, $tmp_row: 1fr, $g_gap: 0px) {
+  grid-template-columns: $tmp_column;
+  grid-template-rows: $tmp_row;
+  grid-gap: $g_gap;
+}
+
+@mixin items_center {
+  align-items: center;
+  justify-self: center;
+}
+
+  .navbar{
+    @include grid_list( 1fr 1fr 1fr, 80px);
+    @include items_center();
+    grid-area: navbar;
+    display: grid;
+    grid-template-areas: "home navlinks .";
+    
+    .home{
+      grid-area: home;
+    }
+    .navlinks{
+      grid-area: navlinks;
+      text-align: center;
+    }
+  }
+  .header{
+    grid-area: header;
+    display: grid;
+  }
+  .content{
+    @include grid_list( 1fr 2fr 1fr, 1fr, 1em );
+    grid-area: content;
+    display: grid;
+    grid-template-areas: ". blog .";
+  }
+  
+  .blog{
+    grid-area: blog;
+    .thumbnail{
+      width: 20%; 
+    }
+  }
+  
+  
+  .footer{
+    @include grid_list(1fr 1fr 1fr);
+    display: grid;
+    grid-area: footer;
+    grid-template-areas: ". footer_wrap .";
+    .footer_wrap{
+      grid-area: footer_wrap;
+    }
+  }

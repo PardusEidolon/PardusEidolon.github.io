@@ -1,34 +1,34 @@
 {{ define "main" }}
-<div class="grid-list">
 {{ partial "nav.html" . }}
-    <div class="header">
-        <div class="headline tc">
-            <h1 class="f-subheadline fw6 ma0 ttu mt3">{{.Title}}</h1>
-            <div class="mv4 center ma0 w-20 bw1 ba"></div>
-            <h1 class="f4 fw4">{{.Summary}}</h1>
-        </div>
+
+<div class="header">
+    <div class="headline tc">
+        <h1 class="f-subheadline fw6 ma0 ttu mt3">{{.Title}}</h1>
+        <div class="mv4 center ma0 w-20 bw1 ba"></div>
+        <h1 class="f4 fw4">{{.Summary}}</h1>
     </div>
-    <div class="content">
-        <div class="blog flex flex-column">
-            {{ range .Pages.ByPublishDate.Reverse }}
-            <div class="flex justify-center items-center mv4">
-                <div class="mh3 thumbnail">
-                    <a href="{{.Permalink}}" class="dim">{{if isset .Params "featured_image" }}
-                        <img src="{{ index .Params "thumbnail" }}"></a>
-                    {{end}}
-                </div>
-                <div class="blog_content">
-                    <h1 class="ma0 mb3 f3 ttc">{{ .Title }}</h1>
-                    <p class="black-80 measure lh-copy">{{ .Summary }}..<a class="link underline-hover black-70"
-                            href="{{.Permalink}}">Read
-                            More</a></p>
-                    {{ partial "date-and-tags.html" . }}
-                </div>
-            </div>
-            {{ end }}
-        </div>
-    </div>
-    <div class="footer">
-        {{ partial "footer.html" . }}
 </div>
+
+<div class="content">
+    <div class="blog flex flex-column">
+        {{ range .Pages.ByPublishDate.Reverse }}
+        <div class="flex justify-center items-center mv4">
+            <div class="mh3 thumbnail">
+                <a href="{{.Permalink}}" class="dim">{{if isset .Params "featured_image" }}
+                    <img src="{{ index .Params "thumbnail" }}"></a>
+                {{end}}
+            </div>
+            <div class="blog_content">
+                <h1 class="ma0 mb3 f3 ttc">{{ .Title }}</h1>
+                <p class="black-80 measure lh-copy">{{ .Summary }}..<a class="link underline-hover black-70"
+                        href="{{.Permalink}}">Read
+                        More</a></p>
+                {{ partial "date-and-tags.html" . }}
+            </div>
+        </div>
+        {{ end }}
+    </div>
+</div>
+
+{{ partial "footer.html" . }}
 {{ end }}

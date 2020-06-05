@@ -1,7 +1,5 @@
 {{ define "main" }}
-<div class="grid-single-nav">
-    {{ partial "nav.html" . }}
-</div>
+{{ partial "nav.html" . }}
 <div class="vh-50 single-header cover" style="background:url({{ index .Params "featured_image" }}) no-repeat center;">
         <div class="white pv3 tc bg-black single-header-content">
             <h1 class="f1 ttu fw5 ma0">{{.Title}}</h1>
@@ -11,7 +9,7 @@
 {{ $sections := split .Content "+++" }}
 <div>
     <div class="single-content">
-        <div class="single-text lh-copy ma4">
+        <div class="single-text lh-copy mt4">
             {{ index $sections 0 | safeHTML }}
         </div>
         <div class="blog_img">
@@ -19,7 +17,6 @@
         </div>
     </div>
 </div>
-<div class="footer">
-    {{ partial "footer.html" . }}
-</div>
+
+{{ partial "footer.html" . }}
 {{ end }}
