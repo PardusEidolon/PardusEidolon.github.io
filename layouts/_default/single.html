@@ -1,26 +1,25 @@
 {{ define "main" }}
-<article>
-    <div class="vh-50-l vh-30-m tc bg-dark-gray cover" style="background:url({{ index .Params "featured_image" }}) no-repeat center;">
-        <div class="flex justify-center items-center">
-            <div class="white w-80 mv6 bg-black br2 ph4">
-                <h1 class="f1-l f2-m f4 fw6 ttu pa3-l pv0-l pv3 pv4-m tracked mb2">{{.Title}}</h1>
-                <h3 class="f6-ns db-l dn fw4">{{ .Date.Format "Mon, Jan 2, 2006" }}</h3>
-            </div>
+<div class="grid-single-nav">
+    {{ partial "nav.html" . }}
+</div>
+<div class="vh-50 single-header cover" style="background:url({{ index .Params "featured_image" }}) no-repeat center;">
+        <div class="white pv3 tc bg-black single-header-content">
+            <h1 class="f1 ttu fw5 ma0">{{.Title}}</h1>
+            <h3 class="f5-ns fw4">{{ .Date.Format "Mon, Jan 2, 2006" }}</h3>
         </div>
-    </div>
-    <!-- Single page body template -->
-    {{ $sections := split .Content "+++" }}
-    <div class="f5-ns f6 lh-copy ph7-l pv4-ns pa4">
-        <h3 class="dn-l db f6 black-70 fw4">{{ .Date.Format "Mon, Jan 2, 2006" }}</h3>
-        {{ index $sections 0 | safeHTML }}
+</div>
+{{ $sections := split .Content "+++" }}
+<div>
+    <div class="single-content">
+        <div class="single-text lh-copy ma4">
+            {{ index $sections 0 | safeHTML }}
+        </div>
         <div class="blog_img">
-            <div class="flex flex-wrap-ns flex-row-ns flex-column mw-100-ns">
                 {{ index $sections 1 | safeHTML }}
-            </div>
         </div>
-        {{ index $sections 2 | safeHTML }}
     </div>
-
-{{ partial "footer.html" . }}
-</article>
+</div>
+<div class="footer">
+    {{ partial "footer.html" . }}
+</div>
 {{ end }}

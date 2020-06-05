@@ -1,13 +1,6 @@
 {{ define "main" }}
-<div class="grid-container">
-    <div class="navbar ">
-        <div class="home"><a href='{{ absURL "/"}}'><i class="black grow dim f3 fas fa-arrow-left"></i></a></div>
-        <nav class="navlinks">
-            {{ range .Site.Menus.main }}
-            <a class="link black f3 pa4 fw6 dim" href="{{ .URL }}">{{ .Name }}</a>
-            {{ end }}
-        </nav>
-    </div>
+<div class="grid-list">
+{{ partial "nav.html" . }}
     <div class="header">
         <div class="headline tc">
             <h1 class="f-subheadline fw6 ma0 ttu mt3">{{.Title}}</h1>
@@ -36,20 +29,6 @@
         </div>
     </div>
     <div class="footer">
-        <div class="Footer_wrap">
-            <div class="tc f3 mv4">
-                <a class="black-70 dim" href="https://www.instagram.com/jack.obrien.does.things/"><i
-                        class="grow fab fa-instagram"></i></a>
-                <a class="black-70 dim mh4" href="https://vimeo.com/parduseidolon"><i
-                        class="grow fab fa-vimeo-v"></i></a>
-                <a class="black-70 dim" href="https://twitter.com/1cooljack"><i class="grow fab fa-twitter"></i></a>
-            </div>
-            <footer class="mv4 tc flex flex-column">
-                <small class="ttc fw2 black-80">{{ $.Site.Params.footertext }}</small>
-                <small class="ttc fw2 black-80 mv2">{{ $.Site.Params.footertext2 }}</small>
-            </footer>
-        </div>
-    </div>
+        {{ partial "footer.html" . }}
 </div>
-
 {{ end }}

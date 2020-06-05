@@ -16,8 +16,7 @@ But alas modern day computing and software advancements beyond the comprehension
 
 We still have a long road to go before this site is spick and span. A mobile deployment still has to created so it doesn't come out stupid on the everyyday smart phpne browser. (or maybe I should just make a portfolio app. Also current review of typewriters so far is it makes me glad I wasn't born under a rock) Performance updates and optimizations still need to be implemented Feel to look at the original pdf of this document to reveal just how bad I would do if a 50's newspaper company decided to hire me to write about opinion pieces.
 
-### Reference:
-
+## Reference:
 - [OverType](https://uniqcode.com/typewriter/) - The Over-The-Top Typewriter Simulator
 
 {{< box-preview id="zewtb9isxdwdcfvldsy7vtz0rubfkgwu" height="400" >}}
