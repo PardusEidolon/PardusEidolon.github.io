@@ -1,22 +1,24 @@
 {{ define "main" }}
 {{ partial "nav.html" . }}
 <div class="vh-50 single-header cover" style="background:url({{ index .Params "featured_image" }}) no-repeat center;">
-        <div class="white pv3 tc bg-black single-header-content">
-            <h1 class="f1 ttu fw5 ma0">{{.Title}}</h1>
-            <h3 class="f5-ns fw4">{{ .Date.Format "Mon, Jan 2, 2006" }}</h3>
-        </div>
+    <div class="white pv3 tc bg-black single-header-content">
+        <h1 class="f1 ttu fw5 ma0">{{.Title}}</h1>
+        <h3 class="f5-ns fw4">{{ .Date.Format "Mon, Jan 2, 2006" }}</h3>
+    </div>
 </div>
 {{ $sections := split .Content "+++" }}
-<div>
-    <div class="single-content">
-        <div class="single-text lh-copy mt4">
-            {{ index $sections 0 | safeHTML }}
-        </div>
-        <div class="blog_img">
-                {{ index $sections 1 | safeHTML }}
+<div class="single-content">
+    <div class="single-text lh-copy mt4">
+        {{ index $sections 0 | safeHTML }}
+    </div>
+    <div class="blog_img">
+        <div class="blog_image_content flex">
+            {{ index $sections 1 | safeHTML }}
         </div>
     </div>
 </div>
+
+
 
 {{ partial "footer.html" . }}
 {{ end }}

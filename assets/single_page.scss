@@ -11,22 +11,27 @@
   .single-header-content{
     grid-area: single-header-content;
   }
+
   .single-content {
-    @include grid_list(100px 2fr 100px);
+    @include grid_list(100px 2fr 100px, 1fr);
     @include items_center();
     display: grid;
     grid-template-areas: ". single-text ."". blog_img .";
     grid-gap: 10px;
-
+    
     .blog_img{
-        grid-area: blog_img;
-        
-        img {
-            width: 30%;
+      grid-area: blog_img;
 
-          }
-    }
+      .blog_image_content{
+      width: 25%;
+      grid-area: blog_image_content;
+        img{
+          margin: 0 1em;
+        }
+      }
+  }
     .single-text{
         grid-area: single-text;
       }
   }
+
