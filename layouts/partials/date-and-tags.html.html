@@ -2,13 +2,13 @@
   <div>
     {{ $dateTime := .PublishDate.Format "2006-01-02" }}
     {{ $dateFormat := .Site.Params.dateFormat | default "Jan 2, 2006" }}
-    <time class="black-70 fw6" datetime="{{ $dateTime }}">{{ .PublishDate.Format $dateFormat }}</time>
+    <time class="black-70 fw6" datetime="{{ $dateTime }}"><h2 class="f6 f5-ns">{{ .PublishDate.Format $dateFormat }}</h2></time>
   </div>
   <div class="mt2">
     {{ with .Params.tags }}
     {{ range . }}
     {{ $href := print (absURL "tags/") (urlize .) }}
-    <a class="link underline-hover black-70" href="{{ $href }}">{{ . }}</a>
+    <a class="link underline-hover black-70 f5-ns f6" href="{{ $href }}">{{ . }}</a>
     {{ end }}
     {{ end }}
   </div>

@@ -1,8 +1,7 @@
 // LIST PAGE GRIDS
-@mixin grid_list ($tmp_column, $tmp_row: 1fr, $g_gap: 0px) {
+@mixin grid_list ($tmp_column, $tmp_row: 1fr) {
   grid-template-columns: $tmp_column;
   grid-template-rows: $tmp_row;
-  grid-gap: $g_gap;
 }
 
 @mixin items_center {
@@ -10,30 +9,19 @@
   justify-self: center;
 }
 
-  .navbar{
-    @include grid_list( 1fr 1fr 1fr, 80px);
-    @include items_center();
-    grid-area: navbar;
-    display: grid;
-    grid-template-areas: "home navlinks .";
-    
-    .home{
-      grid-area: home;
-    }
-    .navlinks{
-      grid-area: navlinks;
-      text-align: center;
-    }
-  }
+
   .header{
     grid-area: header;
-    display: grid;
+    .headline{
+      grid-area: headline;
+    }
   }
   .content{
-    @include grid_list( 1fr 2fr 1fr, 1fr, 1em );
+    @include grid_list( 1fr 2fr 1fr, 1fr);
     grid-area: content;
     display: grid;
-    grid-template-areas: ". blog .";
+    grid-template-areas: ". header ." ". blog .";
+    grid-gap: 1em;
   }
   
   .blog{
@@ -42,14 +30,32 @@
       width: 20%; 
     }
   }
+
+// SMALL DEVICES
+@media only screen and (max-width: 375px) {
   
-  
-  .footer{
-    @include grid_list(1fr 1fr 1fr);
+  .content{
+    @include grid_list( 10px 2fr 10px, 1fr);
+    grid-area: content;
     display: grid;
-    grid-area: footer;
-    grid-template-areas: ". footer_wrap .";
-    .footer_wrap{
-      grid-area: footer_wrap;
+
+    .thumbnail{
+      width: 50%;
     }
   }
+  
+  .blog_wrap{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+// MEDIUM DEVICES
+@media only screen and (max-width: 768px){
+  
+  .content{
+    @include grid_list( 10px 2fr 10px, 1fr);
+    grid-area: content;
+    display: grid;
+  }
+}

@@ -1,37 +1,117 @@
 // SINGLE-PAGE GRIDS
+.single-header {
+  @include grid_list(1fr 2fr 1fr);
+  display: grid;
+  align-items: center;
+  justify-self: center;
+  grid-template-areas: " .single-header-content .";
+}
 
-  .single-header{
-    @include grid_list(1fr 2fr 1fr);
+.single-header-content {
+  grid-area: single-header-content;
+}
+
+.single-content {
+  @include grid_list(100px 2fr 100px);
+  @include items_center();
+  display: grid;
+  grid-template-areas: ". single-text ."". blog_img .";
+  grid-gap: 10px;
+
+  .blog_img {
+    grid-area: blog_img;
+  }
+
+  .blog_image_content {
+    width: 25%;
+    display: flex;
+    flex-direction: row;
+    grid-area: blog_image_content;
+
+    img {
+      margin: 0 0.5em;
+    }
+  }
+}
+
+.single-text {
+  grid-area: single-text;
+ }
+
+// SMALL SCREEN DEVICES
+// --------------------------
+@media only screen and (max-width: 375px) {
+
+  .single-header {
+    @include grid_list(50px 2fr 50px);
+    display: grid;
+    align-items: center;
+    justify-self: center;
+  }
+
+  .single-content {
+    @include grid_list(20px 2fr 20px);
+    @include items_center();
+    display: grid;
+    grid-gap: 10px;
+
+    .blog_img {
+      @include grid_list(20px 2fr 20px);
+      @include items_center();
+      display: grid;
+      grid-template-areas: ". blog_image_content .";
+    }
+
+    .blog_image_content {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      grid-area: blog_image_content;
+      
+      img{
+        margin: 10px 0;
+      }
+
+    }
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+
+  .single-header {
+    @include grid_list(50px 2fr 50px);
     display: grid;
     align-items: center;
     justify-self: center;
     grid-template-areas: " .single-header-content .";
   }
-  
-  .single-header-content{
-    grid-area: single-header-content;
-  }
 
   .single-content {
-    @include grid_list(100px 2fr 100px, 1fr);
+    @include grid_list(20px 2fr 20px);
     @include items_center();
     display: grid;
     grid-template-areas: ". single-text ."". blog_img .";
     grid-gap: 10px;
-    
-    .blog_img{
-      grid-area: blog_img;
 
-      .blog_image_content{
-      width: 25%;
+    .blog_img {
+      @include grid_list(20px 2fr 20px);
+      @include items_center();
+      display: grid;
+      grid-template-areas: ". blog_image_content .";
+    }
+
+    .blog_image_content {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
       grid-area: blog_image_content;
-        img{
-          margin: 0 1em;
-        }
+      
+      img{
+        margin: 10px 0;
       }
-  }
-    .single-text{
-        grid-area: single-text;
-      }
+
+    }
   }
 
+}

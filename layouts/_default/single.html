@@ -2,17 +2,18 @@
 {{ partial "nav.html" . }}
 <div class="vh-50 single-header cover" style="background:url({{ index .Params "featured_image" }}) no-repeat center;">
     <div class="white pv3 tc bg-black single-header-content">
-        <h1 class="f1 ttu fw5 ma0">{{.Title}}</h1>
-        <h3 class="f5-ns fw4">{{ .Date.Format "Mon, Jan 2, 2006" }}</h3>
+        <h1 class="f1-ns f4 pv3 pv0-ns ttu fw5 ma0">{{.Title}}</h1>
+        <h3 class="f5 fw4 db-ns dn">{{ .Date.Format "Mon, Jan 2, 2006" }}</h3>
     </div>
 </div>
 {{ $sections := split .Content "+++" }}
 <div class="single-content">
-    <div class="single-text lh-copy mt4">
+    <div class="single-text f6 lh-copy mt4">
+        <h3 class="f5 fw4 mb3 db dn-ns">{{ .Date.Format "Mon, Jan 2, 2006" }}</h3>
         {{ index $sections 0 | safeHTML }}
     </div>
     <div class="blog_img">
-        <div class="blog_image_content flex">
+        <div class="blog_image_content">
             {{ index $sections 1 | safeHTML }}
         </div>
     </div>
