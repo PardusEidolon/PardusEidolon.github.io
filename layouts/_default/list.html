@@ -1,4 +1,4 @@
-{{ define "main" }}
+{{ define "blog" }}
 <div class="header">
     <div class="headline mt4 tc">
         <h1 class="f-subheadline-l f1 fw6 ma0 ttu mt3">{{.Title}}</h1>
@@ -17,9 +17,8 @@
                 {{end}}
             </div>
             <div class="blog_content">
-                <a class="link dim underline-hover black" href="{{.Permalink}}"><h1 class="mb3 f4 ttc">{{ .Title }}</h1></a>
-                <p class="black-80 measure f5-ns f6 lh-copy">{{ .Summary }}..<a class="link underline-hover black-70"
-                        href="{{.Permalink}}">Read More</a></p>
+                <a class="link dim underline-hover black" href="{{.Permalink}}"><h1 class="mb3 ttc f4 ttc">{{ .Title }}</h1></a>
+                <p class="black-80 measure f5-ns f6 lh-copy">{{ .Summary }}..<a class="link underline-hover black-70" href="{{.Permalink}}">Read More</a></p>
                 {{ partial "date-and-tags.html" . }}
             </div>
         </div>

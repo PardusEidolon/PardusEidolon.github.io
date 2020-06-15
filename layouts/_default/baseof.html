@@ -8,6 +8,8 @@
     {{ partial "nav.html" . }}
     <main>
         {{ block "main" . }}{{ end }}
+        {{ block "blog" . }}{{ end }}
+        {{ block "resume" . }}{{ end }}
     </main>
     {{ partial "footer.html" . }}
 </body>

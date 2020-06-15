@@ -9,5 +9,5 @@ draft: false
 Film and music is in my blood it has been since I first picked up a camera and played the first notes on a piano.
 Growing up surrounded by technology allowed me to latch on to new concepts and techniques at an early age. Today my convictions are as strong as they have ever been as I’m constantly striving to improve myself and spread the wonder that is beautiful. 
 
-For an overall summary, Please check out my [Resumé](#) else check out my work above.
+For an overall summary, Please check out my [Resumé](/resume) else check out my work above.
 

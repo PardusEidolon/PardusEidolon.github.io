@@ -3,9 +3,19 @@
 @import 'list_page';
 @import 'single_page';
 @import 'home_page';
+@import 'resume';
 
 body {
+
+  h1, h2, h3, h4, h5 ,h6, a, small{
   font-family: 'Montserrat', sans-serif;
+  }
+
+  p{
+    font-family: 'Merriweather', serif;
+  }
+
+  
   a{
     color: $black;
   }
@@ -15,10 +25,6 @@ body {
   scroll-behavior: smooth;
   list-style-type: square;
   
-}
-
-* ul{
-  padding: 1em;
 }
 
 .sidebar {
