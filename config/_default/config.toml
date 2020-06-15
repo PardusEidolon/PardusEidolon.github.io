@@ -12,17 +12,21 @@ footertext2 = "powered by Hugo & Tachyons 4.12.0 "
 
 [menu]
   [[menu.main]]
+    name = "home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
     name = "video"
     url = "/video_work"
-    weight = 1
+    weight = 2
   [[menu.main]]
     name = "Blog"
     url = "/blog"
-    weight = 2
+    weight = 3
   [[menu.main]]
     name = "Music"
     url = "/music"
-    weight = 3
+    weight = 4
 
 [taxonomies]
   tag = "tags"

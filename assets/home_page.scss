@@ -1,0 +1,66 @@
+.landingpage{
+    @include items_center();
+    @include grid_list (100px 1fr 1fr, 1fr);
+    display: grid;
+    grid-template-areas: ". heading bird";
+    grid-gap: 1em;
+    margin: 5em 0;
+
+    .heading{
+        grid-area: heading;
+    }
+
+    .bird{
+        grid-area: bird;
+        img{
+            width: 60%;
+        }
+    }
+}
+  
+// MEDIUM DEVICES
+  @media only screen and (max-width: 768px){
+    .landingpage{
+        @include grid_list (10px 1fr 10px, 1fr 1fr);
+        grid-template-areas: ". heading ." " . bird .";
+        grid-gap: 1em;
+        margin: 0 0 0.5em 0;
+
+        h1, h2{
+            text-align: center;
+        }
+    
+        .bird{
+            img{
+                width: 50%;
+            }
+        }
+    }
+      
+  }
+
+  // SMALL DEVICES
+@media only screen and (max-width: 375px) {
+
+    .landingpage{
+        @include grid_list (10px 1fr 10px, 1fr 1fr);
+        grid-template-areas: ". heading ." " . bird .";
+        grid-gap: 0.5em;
+        margin: 0 0 0.5em 0;
+
+        h1{
+            font-size: 44px;
+        }
+
+        h2{
+            font-size: 21px;
+        }
+        
+        .bird{
+            img{
+                width: 100%;
+            }
+        }
+    }
+
+  }

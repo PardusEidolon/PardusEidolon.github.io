@@ -1,8 +1,7 @@
 <div class="navbar">
-    <div class="home"><a href='{{ absURL "/"}}'><i class="black grow dim f3-ns f5 ml5-ns fas fa-arrow-left"></i></a></div>
     <nav class="navlinks">
         {{ range .Site.Menus.main }}
-        <a class="link black f3-ns f5 ph3 fw6 dim ttc" href="{{ .URL }}">{{ .Name }}</a>
+        <a class="link black f4 ph2 fw6 dim ttc" href="{{ .URL }}">{{ .Name }}</a>
         {{ end }}
     </nav>
 </div>
