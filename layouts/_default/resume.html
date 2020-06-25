@@ -1,14 +1,15 @@
 {{ define "resume" }}
-<div class="header pa4 shadow-4">
+{{ $sections := split .Content "+++" }}
+<div class="header">
     <div class="avatar">
-        <img class="br-100 h4 w4 shadow-5" src="/img/avatar.jpg" alt="">
+        <img class="br-100 h4 w4 shadow-5" src="{{ index .Params "avatar" }}" alt="">
     </div>
     <div class="headline">
-        <h1 class="f1 lh-title fw6">Jack O'Brien</h1>
-        <h2 class="fw6">Artist - Sound Engineer - Composer</h2>
+        <h1 class="f1 lh-title fw6">{{ .Params.name }}</h1>
+        <h2 class="fw6">{{ .Description }}</h2>
         <div class="location">
             <i class="mapmarker fas fa-map-marker-alt"></i>
-            <h3 class="fw6">Tauranga, New Zealand</h3>
+            <h3 class="fw6">{{ .Params.Location }}</h3>
         </div>
     </div>
 </div>
@@ -17,65 +18,12 @@
 The Contnent Put in place are just place holders until I push it into a markdown file. -->
 <div class="res-body">
     <div class="about_content lh-copy ">
-        <h1>About Me</h1>
-        <p class="dark-grey">Film and music is in my blood it has been since I first picked up a camera and played the
-            first notes on a piano. Growing up surrounded by technology allowed me to latch on to new concepts and
-            techniques at an early age.
-            <br>
-            <br>
-            Today my convictions are as strong as they have ever been as I’m constantly striving to improve myself and
-            spread the wonder that is beautiful. I currently finished studying my Bachelor of commercial music degree
-            from the Massey University of Wellington New Zealand. My degree taught me not just technical skills but a
-            greater understanding of the process of design of music as a whole. In my area of study I focused my efforts
-            on Software engineering, Programming, Hardware & Software Design.
-            <br>
-            <br>
-            Over the years as a musician I have been in multiple teams on projects of varying disciplines to achieve
-            high degrees of success. As a Engineer I have developed the need to have clearly defined convictions and
-            vision to steer and help my fellow team members.I have refined skill sets in a number of applications
-            including Visual Studio and Adobe Photoshop and After Effects, Autodesk 3ds Max and Pro Tools to help
-            communicate and realise my ideas.</p>
-        <hr>
+        <hr class="mv4">
+        {{ index $sections 0 | safeHTML }}
     </div>
     <!-- Skill Sets -->
     <div class="skills">
-        <h1>Skills</h1>
-        <div class="skill-wrap">
-            <div class="skillblk">
-                <h4>Sound Engineering</h4>
-            </div>
-            <div class="skillblk">
-                <h4>Videography</h4>
-            </div>
-            <div class="skillblk">
-                <h4>3D Composition</h4>
-            </div>
-            <div class="skillblk">
-                <h4>3D Modeling</h4>
-            </div>
-            <div class="skillblk">
-                <h4>Enviroment Art</h4>
-            </div>
-            <div class="skillblk">
-                <h4>Texturing</h4>
-            </div>
-            <div class="skillblk">
-                <h4>Web Development</h4>
-            </div>
-            <div class="skillblk">
-                <h4>Programming</h4>
-            </div>
-            <div class="skillblk">
-                <h4>Concept Art</h4>
-            </div>
-            <div class="skillblk">
-                <h4 >Animation</h4>
-            </div>
-            <div class="skillblk">
-                <h4>Game Design</h4>
-            </div>
-        </div>
-        <hr>
+        
     </div>
     <!-- Software Profiency -->
     <div class="software-body">
@@ -179,30 +127,38 @@ The Contnent Put in place are just place holders until I push it into a markdown
     <div class="ex-body">
         <h1>Experience</h1>
         <div class="ex-wrap">
+            <!-- Currently placeholders until converted through the markdown processor. -->
             <div class="ex-content">
-                <h2>Kickstarter Zingoshi</h1>
+                <h2>Kickstarter Zingoshi</h2>
                     <p class="black-80 ex-para">Promotional clip for The Zingoshi Chronicles video game for kids.</p>
             </div>
             <div class="ex-content">
-                <h2>New Zealand Data Commons Project</h1>
+                <h2>New Zealand Data Commons Project</h2>
                     <p class="black-80 ex-para">Creation of script, storyboard and filming of a future scenario video,
                         championing NZ as a world leader in the trusted, inclusive and protected use of shared data.</p>
             </div>
             <div class="ex-content">
-                <h2>Legal Hackers, Better Rules Hack</h1>
+                <h2>Data Commons Website</h2>
+                    <p class="black-80 ex-para">A revised website for the New Zealand Data Commons Project</p>
+                    <div class="ex-content-date">
+                        <p class="ba ma0">March 2020 – April 2020</p>
+                    </div>
+            </div>
+            <div class="ex-content">
+                <h2>Legal Hackers, Better Rules Hack</h2>
                     <p class="black-80 ex-para">Summary of activity that took place at the Better Rules Hackathon in Wellington,
                         May 2018.</p>
             </div>
             <div class="ex-content">
-                <h2>Arts Foundation</h1>
+                <h2>Arts Foundation</h2>
                     <p class="black-80 ex-para">Visual Storyteller doing Profiles of New Zealand artists such as Robert
                         Thornley, Sara Brodie and Dylan Horrocks</p>
                 <div class="ex-content-date">
-                    <p class="ba">December 2017 – February 2018</p>
+                    <p class="ba ma0">December 2017 – February 2018</p>
                 </div>
             </div>
             <div class="ex-content">
-                <h2>Golden Memories</h1>
+                <h2>Golden Memories</h2>
                     <p class="black-80 ex-para">A short documentary which screened in the Māoriland Film Festival March 2018. In
                         1964 a Māori boy from a poor rural background marries a Pākeha girl from a well-off city family.
                         Fifty years later they recall their meeting, their marriage, and the reaction from their
