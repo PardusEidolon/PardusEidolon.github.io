@@ -7,13 +7,13 @@
 
 body {
 
-  h1, h2, h3, h4, h5 ,h6, a, small{
-  font-family: 'Montserrat', sans-serif;
-  }
+  // h1, h2, h3, h4, h5 ,h6, a, small{
+  // font-family: 'Montserrat', sans-serif;
+  // }
 
-  p{
-    font-family: 'Merriweather', serif;
-  }
+  // p{
+  //   font-family: 'Merriweather', serif;
+  // }
 
   
   a{
@@ -24,7 +24,7 @@ body {
 * {
   scroll-behavior: smooth;
   list-style-type: square;
-  
+  font-family: 'Montserrat', sans-serif;
 }
 
 .sidebar {
@@ -67,6 +67,10 @@ body {
 
   .footer_wrap{
     grid-area: footer_wrap;
+    
+    a{
+      margin: 0 0.5em;
+    }
   }
 }
 
