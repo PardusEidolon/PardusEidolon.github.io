@@ -1,0 +1,15 @@
+<div class="software-wrap">
+    <h1>{{ .Get 0 }}</h1>
+    
+    <div class="body-logo-wrap">
+        <h2 class="f4 fw6">{{ .Get 1 }}</h2>
+        <div class="s-logo-wrap">
+            {{ range $i, $software := $.Page.Params.modeling}}
+            <div class="s-logo">
+                <img src="{{ $software.icon }}" alt="">
+                <h4 class="ml2 fw4">{{ $software.program }}</h4>
+            </div>
+            {{end}}
+        </div>
+    </div>
+</div>

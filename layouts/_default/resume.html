@@ -14,8 +14,7 @@
     </div>
 </div>
 
-<!-- !ATTENTION! Resume Body starts here. 
-The Contnent Put in place are just place holders until I push it into a markdown file. -->
+<!-- !ATTENTION! Resume Body starts here. -->
 <div class="res-body">
     <div class="about_content lh-copy ">
         <hr class="mv4">
@@ -23,105 +22,11 @@ The Contnent Put in place are just place holders until I push it into a markdown
     </div>
     <!-- Skill Sets -->
     <div class="skills">
-        
+        {{ index $sections 1 | safeHTML }}
     </div>
     <!-- Software Profiency -->
     <div class="software-body">
-        <div class="software-wrap">
-            <h1>Software Profciency</h1>
-            <!-- 3D Design -->
-            <div class="body-logo-wrap">
-                <h2 class="f4 fw6">3D Design</h2>
-                <!-- 3D Logos -->
-                <div class="s-logo-wrap">
-                    <div class="s-logo">
-                        <img src="/s_logo/3D/3ds_Max.png" alt="">
-                        <h4 class="ml2 fw4">3Ds Max</h4>
-                    </div>
-                    <div class="s-logo">
-                        <img src="/s_logo/3D/mixer.png" alt="">
-                        <h4 class="ml2 fw4">Quixel Mixer</h4>
-                    </div>
-                    <div class="s-logo">
-                        <img src="/s_logo/3D/substance.png" alt="">
-                        <h4 class="ml2 fw4">Substance Painter</h4>
-                    </div>
-                    <div class="s-logo">
-                        <img src="/s_logo/3D/unreal.png" alt="">
-                        <h4 class="ml2 fw4">Unreal Engine</h4>
-                    </div>
-                    <div class="s-logo">
-                        <img src="/s_logo/3D/vray.png" alt="">
-                        <h4 class="ml2 fw4">Vray</h4>
-                    </div>
-                    <div class="s-logo">
-                        <img src="/s_logo/3D/world creator.png" alt="">
-                        <h4 class="ml2 fw4">World Creator</h4>
-                    </div>
-                </div>
-                <!-- Visual Composition -->
-
-            </div>
-            <!-- Visual Composition -->
-            <div class="body-logo-wrap">
-                <h2 class="f4 fw6">Visual Compostion</h2>
-                <div class="s-logo-wrap">
-                    <div class="s-logo">
-                        <img src="/s_logo/comp/affinity.png" alt="">
-                        <h4 class="ml2 fw4">3Ds Max</h4>
-                    </div>
-                    <div class="s-logo">
-                        <img src="/s_logo/comp/aftereffects.png" alt="">
-                        <h4 class="ml2 fw4">Quixel Mixer</h4>
-                    </div>
-                    <div class="s-logo">
-                        <img src="/s_logo/comp/davinci.png" alt="">
-                        <h4 class="ml2 fw4">Substance Painter</h4>
-                    </div>
-                    <div class="s-logo">
-                        <img src="/s_logo/comp/photoshop.png" alt="">
-                        <h4 class="ml2 fw4">Unreal Engine</h4>
-                    </div>
-                </div>
-            </div>
-            <!-- Sound -->
-            <div class="body-logo-wrap">
-                <h2 class="f4 fw6">Sound</h2>
-                <div class="s-logo-wrap">
-                    <div class="s-logo">
-                        <img src="/s_logo/sound/pro tools.png" alt="">
-                        <h4 class="ml2 fw4">Pro Tools</h4>
-                    </div>
-                    <div class="s-logo">
-                        <img src="/s_logo/sound/abelton.png" alt="">
-                        <h4 class="ml2 fw4">Abelton</h4>
-                    </div>
-                </div>
-            </div>
-            <!-- Web Development -->
-            <div class="body-logo-wrap">
-                <h2 class="f4 fw6">Web Development</h2>
-                <div class="s-logo-wrap">
-                    <div class="s-logo">
-                        <img src="/s_logo/web/CSS.png" alt="">
-                        <h4 class="ml2 fw4">CSS</h4>
-                    </div>
-                    <div class="s-logo">
-                        <img src="/s_logo/web/html5.png" alt="">
-                        <h4 class="ml2 fw4">HTML 5</h4>
-                    </div>
-                    <div class="s-logo">
-                        <img src="/s_logo/web/Hugo.png" alt="">
-                        <h4 class="ml2 fw4">Hugo</h4>
-                    </div>
-                    <div class="s-logo">
-                        <img src="/s_logo/web/SCSS.png" alt="">
-                        <h4 class="ml2 fw4">SCSS</h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <hr>
+        {{ index $sections 2 | safeHTML }}
     </div>
     <!-- Experience -->
     <div class="ex-body">
@@ -130,39 +35,41 @@ The Contnent Put in place are just place holders until I push it into a markdown
             <!-- Currently placeholders until converted through the markdown processor. -->
             <div class="ex-content">
                 <h2>Kickstarter Zingoshi</h2>
-                    <p class="black-80 ex-para">Promotional clip for The Zingoshi Chronicles video game for kids.</p>
+                <p class="black-80 ex-para">Promotional clip for The Zingoshi Chronicles video game for kids.</p>
             </div>
             <div class="ex-content">
                 <h2>New Zealand Data Commons Project</h2>
-                    <p class="black-80 ex-para">Creation of script, storyboard and filming of a future scenario video,
-                        championing NZ as a world leader in the trusted, inclusive and protected use of shared data.</p>
+                <p class="black-80 ex-para">Creation of script, storyboard and filming of a future scenario video,
+                    championing NZ as a world leader in the trusted, inclusive and protected use of shared data.</p>
             </div>
             <div class="ex-content">
                 <h2>Data Commons Website</h2>
-                    <p class="black-80 ex-para">A revised website for the New Zealand Data Commons Project</p>
-                    <div class="ex-content-date">
-                        <p class="ba ma0">March 2020 – April 2020</p>
-                    </div>
+                <p class="black-80 ex-para">A revised website for the New Zealand Data Commons Project</p>
+                <div class="ex-content-date">
+                    <p class="ba ma0">March 2020 – April 2020</p>
+                </div>
             </div>
             <div class="ex-content">
                 <h2>Legal Hackers, Better Rules Hack</h2>
-                    <p class="black-80 ex-para">Summary of activity that took place at the Better Rules Hackathon in Wellington,
-                        May 2018.</p>
+                <p class="black-80 ex-para">Summary of activity that took place at the Better Rules Hackathon in
+                    Wellington,
+                    May 2018.</p>
             </div>
             <div class="ex-content">
                 <h2>Arts Foundation</h2>
-                    <p class="black-80 ex-para">Visual Storyteller doing Profiles of New Zealand artists such as Robert
-                        Thornley, Sara Brodie and Dylan Horrocks</p>
+                <p class="black-80 ex-para">Visual Storyteller doing Profiles of New Zealand artists such as Robert
+                    Thornley, Sara Brodie and Dylan Horrocks</p>
                 <div class="ex-content-date">
                     <p class="ba ma0">December 2017 – February 2018</p>
                 </div>
             </div>
             <div class="ex-content">
                 <h2>Golden Memories</h2>
-                    <p class="black-80 ex-para">A short documentary which screened in the Māoriland Film Festival March 2018. In
-                        1964 a Māori boy from a poor rural background marries a Pākeha girl from a well-off city family.
-                        Fifty years later they recall their meeting, their marriage, and the reaction from their
-                        families.</p>
+                <p class="black-80 ex-para">A short documentary which screened in the Māoriland Film Festival March
+                    2018. In
+                    1964 a Māori boy from a poor rural background marries a Pākeha girl from a well-off city family.
+                    Fifty years later they recall their meeting, their marriage, and the reaction from their
+                    families.</p>
             </div>
         </div>
     </div>

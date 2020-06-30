@@ -9,18 +9,40 @@ Location: Tauranga, New Zealand
 draft: false
 
 skills:
-    title: "Sound Engineering"
-    title: "Videography"
-    title: "VFX Composition"
-    title: "Enviroment Art"
-    title: "Procedural Texturing"
-    title: "Web Development"
-    title: "Programming"
-    title: "Concept Art"
-    title: "Animation"
-    title: "Motion Graphics"
+    - title: "Sound Engineering"
+    - title: "Videography"
+    - title: "VFX Composition"
+    - title: "Enviroment Art"
+    - title: "Procedural Texturing"
+    - title: "Web Development"
+    - title: "Programming"
+    - title: "Concept Art"
+    - title: "Animation"
+    - title: "Motion Graphics"
 
+Modeling:
+  - program: "3ds Max"
+    icon: "/s_logo/3D/3ds_Max.png"
+  - program: "Mixer"
+    icon: "/s_logo/3D/mixer.png"
+  - program: "Substance"
+    icon: "/s_logo/3D/substance.png"
+  - program: "Unreal Engine"
+    icon: "/s_logo/3D/unreal.png"
+  - program: "World Creator"
+    icon: "/s_logo/3D/worldcreator.png"
+
+Composition:
+  - program: "Affinity Design"
+    icon: "/s_logo/comp/affinity.png"
+  - program: "After Effects"
+    icon: "/s_logo/comp/aftereffects.png"
+  - program: "Davinci"
+    icon: "/s_logo/comp/davinci.png"
+  - program: "Photoshop"
+    icon: "/s_logo/comp/photoshop.png"
 ---
+
 # About Me
 
 Film and music is in my blood it has been since I first picked up a camera and played the first notes on a piano. Growing up surrounded by technology allowed me to latch on to new concepts and
@@ -34,7 +56,15 @@ Over the years as a musician I have been in multiple teams on projects of varyin
 communicate and realise my ideas.
 
 ---
+
 +++
+
 {{< skills title="Skills" >}}
-{{< /skill >}}
+
+---
+
 +++
+
+{{< software "Software Experience" "3D Design" "balls">}}
+
+---

@@ -1,19 +1,5 @@
 {{ define "main" }}
 {{ $sections := split .Content "+++" }}
-{{ partial "sidebar.html" . }}
-
-<!-- Main page content -->
-<div id="main">
-    <!-- nav menu buttons -->
-    <div class="flex justify-between items-center">
-        <a href='{{ absURL "/"}}'><i class="ma4 black grow dim f2 fas fa-arrow-left"></i></a>
-        <!-- Page Links -->
-        <div>
-            <a class="link grow dim  black f3 fw7 ttu mr4" href="/blog">Blog</a>
-            <a class="link grow dim black f3 fw7 ttu" href="/music">Music</a>
-        </div>
-        <button class="ma4 grow dim bn bg-white" onclick="openNav()"><i class="black f2 fas fa-info-circle"></i></button>
-    </div>
     <!-- main content header -->
     <div class="flex mt5 flex-column justify-center">
         <h1 class="tc ma0 pa0 fw6 f-subheadline ttu">{{ .Title }}</h1>
@@ -24,7 +10,5 @@
             {{ index $sections 0 | safeHTML }}
         </div>
     </div>
-    {{ partial "footer.html" . }}
 </div>
-{{ partial "sidebar_javascript.html" . }}
 {{ end }}
