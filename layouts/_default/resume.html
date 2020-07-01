@@ -30,47 +30,9 @@
     </div>
     <!-- Experience -->
     <div class="ex-body">
-        <h1>Experience</h1>
+        {{ index $sections 3 | safeHTML }}
         <div class="ex-wrap">
-            <!-- Currently placeholders until converted through the markdown processor. -->
-            <div class="ex-content">
-                <h2>Kickstarter Zingoshi</h2>
-                <p class="black-80 ex-para">Promotional clip for The Zingoshi Chronicles video game for kids.</p>
-            </div>
-            <div class="ex-content">
-                <h2>New Zealand Data Commons Project</h2>
-                <p class="black-80 ex-para">Creation of script, storyboard and filming of a future scenario video,
-                    championing NZ as a world leader in the trusted, inclusive and protected use of shared data.</p>
-            </div>
-            <div class="ex-content">
-                <h2>Data Commons Website</h2>
-                <p class="black-80 ex-para">A revised website for the New Zealand Data Commons Project</p>
-                <div class="ex-content-date">
-                    <p class="ba ma0">March 2020 – April 2020</p>
-                </div>
-            </div>
-            <div class="ex-content">
-                <h2>Legal Hackers, Better Rules Hack</h2>
-                <p class="black-80 ex-para">Summary of activity that took place at the Better Rules Hackathon in
-                    Wellington,
-                    May 2018.</p>
-            </div>
-            <div class="ex-content">
-                <h2>Arts Foundation</h2>
-                <p class="black-80 ex-para">Visual Storyteller doing Profiles of New Zealand artists such as Robert
-                    Thornley, Sara Brodie and Dylan Horrocks</p>
-                <div class="ex-content-date">
-                    <p class="ba ma0">December 2017 – February 2018</p>
-                </div>
-            </div>
-            <div class="ex-content">
-                <h2>Golden Memories</h2>
-                <p class="black-80 ex-para">A short documentary which screened in the Māoriland Film Festival March
-                    2018. In
-                    1964 a Māori boy from a poor rural background marries a Pākeha girl from a well-off city family.
-                    Fifty years later they recall their meeting, their marriage, and the reaction from their
-                    families.</p>
-            </div>
+            {{ index $sections 4 | safeHTML }}
         </div>
     </div>
     {{ end }}

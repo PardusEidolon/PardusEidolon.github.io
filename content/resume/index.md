@@ -20,7 +20,7 @@ skills:
     - title: "Animation"
     - title: "Motion Graphics"
 
-Modeling:
+Modeling: 
   - program: "3ds Max"
     icon: "/s_logo/3D/3ds_Max.png"
   - program: "Mixer"
@@ -41,6 +41,24 @@ Composition:
     icon: "/s_logo/comp/davinci.png"
   - program: "Photoshop"
     icon: "/s_logo/comp/photoshop.png"
+  - program: "Unreal Engine"
+    icon: "/s_logo/3D/unreal.png"
+
+Sound:
+  - program: "Abelton"
+    icon: "/s_logo/sound/abelton.png"
+  - program: "Pro Tools"
+    icon: "/s_logo/sound/protools.png"
+
+Web:
+  - program: "HTML5"
+    icon: "/s_logo/web/html5.png"
+  - program: "CSS"
+    icon: "/s_logo/web/CSS.png"
+  - program: "Sass"
+    icon: "/s_logo/web/SCSS.png"
+  - program: "Hugo"
+    icon: "/s_logo/web/Hugo.png"
 ---
 
 # About Me
@@ -65,6 +83,42 @@ communicate and realise my ideas.
 
 +++
 
-{{< software "Software Experience" "3D Design" "balls">}}
+# Software Experience
+
+{{< software "Modeling" "3D Design" >}}
+{{< software "Composition" "Visual Composition">}}
+{{< software "Sound" "Sound Engineering">}}
+{{< software "Web" "Web Development">}}
 
 ---
+
++++
+# Experience
+*A Short Description Of My Work Over The Years.*
++++
+{{< projects title="Kickstarter Zingoshi">}}
+Promotional clip for The Zingoshi Chronicles video game for kids.
+{{< /projects >}}
+{{< projects title="New Zealand Data Commons Project">}}
+Creation of script, storyboard and filming of a future scenario video,
+championing NZ as a world leader in the trusted, inclusive and protected use of shared data.
+{{< /projects >}}
+{{< projects title="New Zealand Data Commons Website">}}
+ revised website for the New Zealand Data Commons Project.
+ <div class="ex-content-date">
+  <p class="ba ma0">March 2020– April 2020</p>
+</div>
+{{< /projects >}}
+{{< projects title="Legal Hackers, Better Rules Hack">}}
+Summary of activity that took place at the Better Rules Hackathon in Wellington, May 2018.
+{{< /projects >}}
+{{< projects title="Arts Foundation">}}
+Visual Storyteller doing Profiles of New Zealand artists such as Robert Thornley, Sara Brodie and Dylan Horrocks.
+<div class="ex-content-date">
+  <p class="ba ma0">December 2017 – February 2018</p>
+</div>
+{{< /projects >}}
+{{< projects title="Golden Memories">}}
+A short documentary which screened in the Māoriland Film Festival March 2018. In 1964 a Māori boy from a poor rural background marries a Pākeha girl from a well-off city family. Fifty years later they recall their meeting, their marriage, and the reaction from their families.
+{{< /projects >}}
++++
