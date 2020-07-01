@@ -59,6 +59,9 @@ Web:
     icon: "/s_logo/web/SCSS.png"
   - program: "Hugo"
     icon: "/s_logo/web/Hugo.png"
+
+Artfoundation:
+  - date: "December 2017 – February 2018"
 ---
 
 # About Me
@@ -93,32 +96,24 @@ communicate and realise my ideas.
 ---
 
 +++
+
 # Experience
 *A Short Description Of My Work Over The Years.*
+
 +++
-{{< projects title="Kickstarter Zingoshi">}}
-Promotional clip for The Zingoshi Chronicles video game for kids.
+{{< projects "Kickstarter Zyngoshi">}}
+Promotional clip for The Zingoshi Chronicles video game for kids. This little project was a start to a profile of videos to describe the process of the work put into the game. Sadly the project was unable to meet the crowd funding target.
 {{< /projects >}}
-{{< projects title="New Zealand Data Commons Project">}}
-Creation of script, storyboard and filming of a future scenario video,
-championing NZ as a world leader in the trusted, inclusive and protected use of shared data.
+{{< projects "Legal Hackers, Better Rules Hack">}}
+Summary of activity that took place at the Better Rules Hackathon in Wellington, May 2018. *Check out my video page [here](/video_work) for more*.
 {{< /projects >}}
-{{< projects title="New Zealand Data Commons Website">}}
- revised website for the New Zealand Data Commons Project.
- <div class="ex-content-date">
-  <p class="ba ma0">March 2020– April 2020</p>
-</div>
+{{< projects "New Zealand Data Commons Project">}}
+Creation of script, storyboard and filming of a future scenario video, championing NZ as a world leader in the trusted, inclusive and protected use of shared data. Unfortunatley this project was scrapped and I ended up designing a fully responsive website instead. *For more click [here](https://datacommons.org.nz/)*.
 {{< /projects >}}
-{{< projects title="Legal Hackers, Better Rules Hack">}}
-Summary of activity that took place at the Better Rules Hackathon in Wellington, May 2018.
-{{< /projects >}}
-{{< projects title="Arts Foundation">}}
+{{< projects "Artfoundation" "Arts Foundation">}}
 Visual Storyteller doing Profiles of New Zealand artists such as Robert Thornley, Sara Brodie and Dylan Horrocks.
-<div class="ex-content-date">
-  <p class="ba ma0">December 2017 – February 2018</p>
-</div>
 {{< /projects >}}
-{{< projects title="Golden Memories">}}
-A short documentary which screened in the Māoriland Film Festival March 2018. In 1964 a Māori boy from a poor rural background marries a Pākeha girl from a well-off city family. Fifty years later they recall their meeting, their marriage, and the reaction from their families.
+{{< projects "Golden Memories">}}
+Creation of script, storyboard and filming of a future scenario video, championing NZ as a world leader in the trusted, inclusive and protected use of shared data.
 {{< /projects >}}
 +++

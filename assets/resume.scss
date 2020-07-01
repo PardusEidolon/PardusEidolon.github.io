@@ -1,46 +1,54 @@
-.header{
+.header {
     text-align: center;
-    .location{
+    box-shadow: 23px 20px 37px 0px rgba(0, 0, 0, 0.200);
+    padding: 25px;
+
+    .location {
         display: flex;
         justify-content: center;
         align-items: center;
 
-        .mapmarker{
+        .mapmarker {
             margin: 0 1em;
         }
     }
 }
 
-.res-body{
+.res-body {
     @include grid_list(1fr 2fr 1fr, 1fr);
     display: grid;
-    grid-template-areas: ". about_content ." ". skills ." ". software-body ." ". ex-body .";
+    grid-template-areas: ". about_content ."". skills ."". software-body ."". ex-body .";
     grid-area: about;
     margin: 1em 0;
-    
-    .about_content{
+
+    .about_content {
         grid-area: about_content;
     }
-// Skill Set classes here
-    .skills{
+
+    // Skill Set classes here
+    .skills {
         grid-area: skills;
 
-        .skill-wrap{
+        .skill-wrap {
             display: flex;
             flex-wrap: wrap;
             align-items: center;
-            .skillblk{
+
+            .skillblk {
                 margin-right: 0.5em;
+
                 h4 {
                     font-size: 14px;
                     padding: 8px;
                     font-weight: 400;
                     text-transform: capitalize;
-                    border-style: solid; border-width: 1px;
+                    border-style: solid;
+                    border-width: 1px;
                 }
             }
         }
     }
+
     // Software proficiencies
     .software-body {
         grid-area: software-body;
@@ -49,7 +57,7 @@
             display: flex;
             flex-direction: column;
 
-            .body-logo-wrap{
+            .body-logo-wrap {
                 margin: 1em 0;
             }
 
@@ -62,6 +70,7 @@
                     display: flex;
                     align-items: center;
                     margin-right: 1.5em;
+
                     img {
                         width: 35px;
                     }
@@ -70,7 +79,7 @@
         }
     }
 
-// experience body
+    // experience body
     .ex-body {
         grid-area: ex-body;
 
@@ -81,8 +90,9 @@
             .ex-content {
                 margin: 5px 0;
 
-                .ex-content-date{
+                .ex-content-date {
                     width: 30%;
+
                     p {
                         text-align: center;
                         font-size: 13px;
@@ -92,9 +102,15 @@
 
                 .ex-para {
                     line-height: 1.5em;
+                    margin: 0px;
                 }
             }
         }
     }
+}
 
-    }
+// SMALL DEVICES
+@media only screen and (max-width: 375px) {}
+
+// MEDIUM DEVICES
+@media only screen and (max-width: 768px){}

@@ -24,8 +24,8 @@ footertext2 = "powered by Hugo & Tachyons 4.12.0 "
     url = "/blog"
     weight = 3
   [[menu.main]]
-    name = "Music"
-    url = "/music"
+    name = "Resumé"
+    url = "/resume"
     weight = 4
 
 [taxonomies]

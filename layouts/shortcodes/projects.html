@@ -1,4 +1,9 @@
 <div class="ex-content">
-    <h2>{{ .Get "title" }}</h2>
-    <p class="black-80 ex-para">{{ .Inner }}</p>
+    <h2>{{ default (.Get 0) (.Get 1) }}</h2>
+    <p class="black-80 ex-para">{{ .Inner | markdownify }}</p>
+    {{ range $i, $experience := .Get 0 | $.Page.Param }}
+    <div class="ex-content-date">
+        <p class="ba ma0">{{ $experience.date }}</p>
+    </div>
+    {{ end }}
 </div>
