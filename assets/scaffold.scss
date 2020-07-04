@@ -98,6 +98,7 @@ body {
 
 // MEDIUM DEVICES
 @media only screen and (max-width: 768px){
+  
   .navbar{
     @include grid_list( 30px 1fr 30px, 100px);
     grid-template-areas: ". navlinks .";
@@ -107,5 +108,10 @@ body {
     .navlinks{
       text-align: center;
     }
+  }
+
+  .footer{
+    @include grid_list(50px 1fr 50px);
+    display: grid;
   }
 }

@@ -1,4 +1,4 @@
-.header {
+.resume_head {
     text-align: center;
     box-shadow: 23px 20px 37px 0px rgba(0, 0, 0, 0.200);
     padding: 25px;
@@ -35,15 +35,16 @@
             align-items: center;
 
             .skillblk {
-                margin-right: 0.5em;
+                padding: 8px;
+                border-style: solid;
+                border-width: 1px;
+                margin: 1em 1em 1em 0;
 
                 h4 {
                     font-size: 14px;
-                    padding: 8px;
                     font-weight: 400;
                     text-transform: capitalize;
-                    border-style: solid;
-                    border-width: 1px;
+                    margin: 0;
                 }
             }
         }
@@ -110,7 +111,129 @@
 }
 
 // SMALL DEVICES
-@media only screen and (max-width: 375px) {}
+@media only screen and (max-width: 375px) {
+
+    .res-body {
+        @include grid_list(30px 2fr 30px, 1fr);
+        grid-template-areas: ". about_content ."". skills ."". software-body ."". ex-body .";
+        margin: 1em 0;
+
+// Small Skill Set classes here
+        .skills {
+            grid-area: skills;
+
+            .skill-wrap {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .skillblk {
+                    width: 70%;
+                    padding: 8px;
+                    margin: 0.5em;
+                    text-align: center;
+
+                    h4 {
+                        font-size: 15px;
+                        font-weight: 400;
+                        text-transform: capitalize;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+
+// Small Software proficiencies
+        .software-body {
+            h1 {
+                text-align: center;
+            }
+
+            .software-wrap {
+                display: flex;
+                flex-direction: column;
+
+                .body-logo-wrap {
+                    margin: 0 0;
+                }
+
+                .s-logo-wrap {
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+        }
+
+// Small Experience body
+        .ex-body {
+            grid-area: ex-body;
+
+            .ex-wrap {
+                display: flex;
+                flex-direction: column;
+
+                .ex-content {
+                    margin: 0 0;
+
+                    .ex-content-date {
+                        width: 80%;
+                        margin: 1em 0 1em;
+
+                        p {
+                            text-align: center;
+                            font-size: 13px;
+                            padding: 0.4em;
+                        }
+                    }
+
+                    .ex-para {
+                        line-height: 1.5em;
+                        margin: 0px;
+                    }
+                }
+            }
+        }
+    }
+}
 
 // MEDIUM DEVICES
-@media only screen and (max-width: 768px){}
+@media only screen and (max-width: 768px) {
+    .res-body {
+        @include grid_list(50px 1fr 50px, 1fr);
+        display: grid;
+        grid-template-areas: ". about_content ."". skills ."". software-body ."". ex-body .";
+        grid-area: about;
+        margin: 1em 0;
+
+// Medium Experience body
+.ex-body {
+    grid-area: ex-body;
+
+    .ex-wrap {
+        display: flex;
+        flex-direction: column;
+
+        .ex-content {
+            margin: 0 0;
+
+            .ex-content-date {
+                width: 45%;
+                margin: 1em 0 1em;
+
+                p {
+                    text-align: center;
+                    font-size: 13px;
+                    padding: 0.4em;
+                }
+            }
+
+            .ex-para {
+                line-height: 1.5em;
+                margin: 0px;
+            }
+        }
+    }
+}
+
+    }
+}
