@@ -4,6 +4,7 @@
 @import 'single_page';
 @import 'home_page';
 @import 'resume';
+@import 'video';
 
 body {
 
@@ -70,6 +71,7 @@ body {
     
     a{
       margin: 0 0.5em;
+      font-size: 25px;
     }
   }
 }
@@ -92,6 +94,15 @@ body {
   .footer{
     @include grid_list(50px 2fr 50px);
     display: grid;
+    
+    .footer_wrap{
+      grid-area: footer_wrap;
+      
+      a{
+        margin: 0 0.5em;
+        font-size: 18px;
+      }
+    }
   }
 
 }
@@ -113,5 +124,14 @@ body {
   .footer{
     @include grid_list(50px 1fr 50px);
     display: grid;
+    
+    .footer_wrap{
+      grid-area: footer_wrap;
+      
+      a{
+        margin: 0 0.5em;
+        font-size: 22px;
+      }
+    }
   }
 }

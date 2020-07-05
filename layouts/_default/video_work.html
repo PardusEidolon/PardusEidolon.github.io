@@ -1,14 +1,15 @@
-{{ define "main" }}
+{{ define "video" }}
 {{ $sections := split .Content "+++" }}
-    <!-- main content header -->
-    <div class="flex mt5 flex-column justify-center">
-        <h1 class="tc ma0 pa0 fw6 f-subheadline ttu">{{ .Title }}</h1>
-        <div class=" mv4 center w-20 bw1 ba"></div>
-        <h2 class="tc ma0 fw2">{{ .Summary }}</h2>
-        <!-- videos -->
-        <div class="center">
-            {{ index $sections 0 | safeHTML }}
-        </div>
+<!-- main content header -->
+<div class="header">
+    <div class="headline mt4 tc">
+        <h1 class="f-subheadline-l f2 fw6 ma0 ttu mt3">{{.Title}}</h1>
+        <div class="mv4 center ma0 w-20-ns w-30 bw1 ba"></div>
+        <h1 class="f4-ns f6 w5 w-100-ns center fw4">{{.Summary}}</h1>
     </div>
+</div>
+<!-- videos -->
+<div class="v_body">
+    {{ index $sections 0 | safeHTML }}
 </div>
 {{ end }}

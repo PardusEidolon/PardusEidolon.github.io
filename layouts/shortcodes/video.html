@@ -1,0 +1,11 @@
+<div class="v_wrap">
+    <div class="v_player">
+        <iframe src="https://player.vimeo.com/video/{{ .Get "link" }}" frameborder="0"
+        allow="autoplay; fullscreen" allowfullscreen></iframe>
+    </div>
+
+    <div class="v_summary">
+        <h2>{{ .Get "title" }}</h2>
+        <p>{{ .Inner }}</p>
+    </div>
+</div>
