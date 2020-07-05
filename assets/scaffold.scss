@@ -5,6 +5,7 @@
 @import 'home_page';
 @import 'resume';
 @import 'video';
+@import 'preloader';
 
 body {
 
@@ -77,35 +78,6 @@ body {
 }
 
 //----------------------
-// SMALL DEVICES
-@media only screen and (max-width: 375px) {
-
-  .navbar{
-    @include grid_list( 50px 1fr 50px, 80px);
-    @include items_center();
-    grid-template-areas: ". navlinks .";
-    display: grid;
-    
-    .navlinks{
-      text-align: center;
-    }
-  }
-
-  .footer{
-    @include grid_list(50px 2fr 50px);
-    display: grid;
-    
-    .footer_wrap{
-      grid-area: footer_wrap;
-      
-      a{
-        margin: 0 0.5em;
-        font-size: 18px;
-      }
-    }
-  }
-
-}
 
 // MEDIUM DEVICES
 @media only screen and (max-width: 768px){
@@ -134,4 +106,34 @@ body {
       }
     }
   }
+}
+
+// SMALL DEVICES
+@media only screen and (max-width: 375px) {
+
+  .navbar{
+    @include grid_list( 30px 1fr 30px, 80px);
+    @include items_center();
+    grid-template-areas: ". navlinks .";
+    display: grid;
+    
+    .navlinks{
+      text-align: center;
+    }
+  }
+
+  .footer{
+    @include grid_list(50px 2fr 50px);
+    display: grid;
+    
+    .footer_wrap{
+      grid-area: footer_wrap;
+      
+      a{
+        margin: 0 0.5em;
+        font-size: 18px;
+      }
+    }
+  }
+
 }

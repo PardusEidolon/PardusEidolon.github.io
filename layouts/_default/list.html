@@ -11,7 +11,7 @@
     <div class="blog flex flex-column">
         {{ range .Pages.ByPublishDate.Reverse }}
         <div class="flex-ns justify-center-ns items-center-ns mv4-ns mv3 blog_wrap">
-            <div class="mh3-l mh4-m thumbnail db-ns dn">
+            <div class="mh4-ns thumbnail db-ns dn">
                 <a href="{{.Permalink}}" class="dim">{{if isset .Params "featured_image" }}
                     <img src="{{ index .Params "thumbnail" }}"></a>
                 {{end}}

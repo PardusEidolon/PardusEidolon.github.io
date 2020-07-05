@@ -110,6 +110,47 @@
     }
 }
 
+// MEDIUM DEVICES
+@media only screen and (max-width: 768px) {
+    .res-body {
+        @include grid_list(50px 1fr 50px, 1fr);
+        display: grid;
+        grid-template-areas: ". about_content ."". skills ."". software-body ."". ex-body .";
+        grid-area: about;
+        margin: 1em 0;
+
+        // Medium Experience body
+        .ex-body {
+            grid-area: ex-body;
+
+            .ex-wrap {
+                display: flex;
+                flex-direction: column;
+
+                .ex-content {
+                    margin: 0 0;
+
+                    .ex-content-date {
+                        width: 45%;
+                        margin: 1em 0 1em;
+
+                        p {
+                            text-align: center;
+                            font-size: 13px;
+                            padding: 0.4em;
+                        }
+                    }
+
+                    .ex-para {
+                        line-height: 1.5em;
+                        margin: 0px;
+                    }
+                }
+            }
+        }
+    }
+}
+
 // SMALL DEVICES
 @media only screen and (max-width: 375px) {
 
@@ -118,7 +159,7 @@
         grid-template-areas: ". about_content ."". skills ."". software-body ."". ex-body .";
         margin: 1em 0;
 
-// Small Skill Set classes here
+        // Small Skill Set classes here
         .skills {
             grid-area: skills;
 
@@ -143,7 +184,7 @@
             }
         }
 
-// Small Software proficiencies
+        // Small Software proficiencies
         .software-body {
             h1 {
                 text-align: center;
@@ -164,7 +205,7 @@
             }
         }
 
-// Small Experience body
+        // Small Experience body
         .ex-body {
             grid-area: ex-body;
 
@@ -193,47 +234,5 @@
                 }
             }
         }
-    }
-}
-
-// MEDIUM DEVICES
-@media only screen and (max-width: 768px) {
-    .res-body {
-        @include grid_list(50px 1fr 50px, 1fr);
-        display: grid;
-        grid-template-areas: ". about_content ."". skills ."". software-body ."". ex-body .";
-        grid-area: about;
-        margin: 1em 0;
-
-// Medium Experience body
-.ex-body {
-    grid-area: ex-body;
-
-    .ex-wrap {
-        display: flex;
-        flex-direction: column;
-
-        .ex-content {
-            margin: 0 0;
-
-            .ex-content-date {
-                width: 45%;
-                margin: 1em 0 1em;
-
-                p {
-                    text-align: center;
-                    font-size: 13px;
-                    padding: 0.4em;
-                }
-            }
-
-            .ex-para {
-                line-height: 1.5em;
-                margin: 0px;
-            }
-        }
-    }
-}
-
     }
 }

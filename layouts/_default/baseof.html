@@ -5,6 +5,7 @@
 </head>
 
 <body>
+    {{ partial "preloader.html" . }}
     {{ partial "nav.html" . }}
     <main>
         {{ block "main" . }}{{ end }}
