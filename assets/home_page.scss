@@ -8,16 +8,43 @@
 
     .heading{
         grid-area: heading;
-
+        h1 {
+            color: red;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: $font-size-subheadline;
+            margin: 0.5em 0;
+        }
+        h2 {
+            text-transform: uppercase;
+            margin: 1.5em 0;
+            font-size: 1.3rem;
+        }
         a {
             font-weight: 600;
+        }
+
+        .body{
+            line-height: 1.5em;
+            margin: 1.5em 0;
+            color: $black-70;
         }
     }
 
     .bird{
         grid-area: bird;
         img{
+            animation: bird_bg 30s infinite;
+            animation-direction: alternate;
             width: 60%;
+            border-radius: 50%;
+        }
+        @keyframes bird_bg {
+            0%{background-color: salmon;}
+            25%{background-color: royalblue;}
+            50%{background-color: cyan;}
+            75%{background-color: mediumpurple;}
+            100%{background-color: indianred;}
         }
     }
 }
@@ -47,22 +74,23 @@
 @media only screen and (max-width: 375px) {
 
     .landingpage{
-        @include grid_list (10px 1fr 10px, 1fr 1fr);
-        grid-template-areas: ". heading ." " . bird .";
+        @include grid_list (10px 1fr 10px, 1fr);
+        grid-template-areas: ". heading .";
         grid-gap: 0.5em;
         margin: 0 0 0.5em 0;
-
-        h1{
-            font-size: 44px;
+        .heading{
+            h1{
+                font-size: 40px;
+                margin: 1em 0;
+            }
+    
+            h2{
+                font-size: 20px;
+            }
         }
-
-        h2{
-            font-size: 21px;
-        }
-        
         .bird{
             img{
-                width: 100%;
+                display: none;
             }
         }
     }

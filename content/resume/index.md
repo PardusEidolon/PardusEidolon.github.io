@@ -105,15 +105,15 @@ communicate and realise my ideas.
 Promotional clip for The Zingoshi Chronicles video game for kids. This little project was a start to a profile of videos to describe the process of the work put into the game. Sadly the project was unable to meet the crowd funding target.
 {{< /projects >}}
 {{< projects "Legal Hackers, Better Rules Hack">}}
-Summary of activity that took place at the Better Rules Hackathon in Wellington, May 2018. *Check out my video page [here](/video_work) for more*.
+In May 2018, the Legal Hackers (NZ Chapter) ran a Better Rules Hackathon in Wellington over a weekend. *Check out my video page [here](/video_work) for more*.
 {{< /projects >}}
 {{< projects "New Zealand Data Commons Project">}}
-Creation of script, storyboard and filming of a future scenario video, championing NZ as a world leader in the trusted, inclusive and protected use of shared data. Unfortunatley this project was scrapped and I ended up designing a fully responsive website instead. *For more click [here](https://datacommons.org.nz/)*.
-{{< /projects >}}
+A future scenario video, championing NZ as a world leader in the trusted, inclusive and protected use of shared data. Unfortunately this project was scrapped and I ended up designing a fully responsive website instead. *For more click [here](https://datacommons.org.nz/)*.{{< /projects >}}
 {{< projects "Artfoundation" "Arts Foundation">}}
-Visual Storyteller doing Profiles of New Zealand artists such as Robert Thornley, Sara Brodie and Dylan Horrocks.
-{{< /projects >}}
+Volunteered as a visual Storyteller doing profiles of New Zealand artists such as Robert Thornley, Sara Brodie and Dylan Horrocks. And other creative artists around wellington.{{< /projects >}}
 {{< projects "Golden Memories">}}
-Creation of script, storyboard and filming of a future scenario video, championing NZ as a world leader in the trusted, inclusive and protected use of shared data.
+A documentary of a māori boy from a poor rural background marries a pākeha girl from a well off city family. Fifty years later they recall their meeting, their marriage, and the reaction from their families.{{< /projects >}}
+{{< projects "Future of Music">}}
+As part of my final year in university I decided to create a documentary film on the future of the music industry. The project’s aim was to create a film that explores the future evolution of music technology. The subject matter will cover what impact emerging digital technology might have on creative opportunities, production, and the various ways we can experience music. I wanted to be able to explain to my audience the importance of music beyond the three minute song. I want to demonstrate that many facets of music are at the cutting edge of technology and human culture, To show the generation that is paving the music technology industry today.
 {{< /projects >}}
 +++

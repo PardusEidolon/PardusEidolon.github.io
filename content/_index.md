@@ -1,7 +1,7 @@
 ---
 title: "Jack O'Brien"
 summary: "A portfolio of my work"
-home_image: "/img/Bird_Circle.svg" 
+home_image: "/img/bird_black.png" 
 date: 2020-05-16T14:31:03+12:00
 draft: false
 ---

@@ -53,7 +53,15 @@ body {
   @include items_center();
   grid-area: navbar;
   display: grid;
-  grid-template-areas: ". . navlinks";
+  grid-template-areas: "adjust . navlinks";
+
+  .adjust{
+    grid-area: adjust;
+    i{
+      font-size: 25px;
+      margin: 0 3em;
+    }
+  }
 
   .navlinks{
     grid-area: navlinks;
@@ -84,7 +92,7 @@ body {
   
   .navbar{
     @include grid_list( 30px 1fr 30px, 100px);
-    grid-template-areas: ". navlinks .";
+    grid-template-areas: "adjust navlinks .";
     @include items_center();
     display: grid;
     
@@ -114,9 +122,17 @@ body {
   .navbar{
     @include grid_list( 30px 1fr 30px, 80px);
     @include items_center();
-    grid-template-areas: ". navlinks .";
+    grid-template-areas: " . adjust ."". navlinks .";
     display: grid;
     
+    .adjust{
+      text-align: center;
+      i{
+        margin: 0;
+      }
+
+    }
+
     .navlinks{
       text-align: center;
     }
